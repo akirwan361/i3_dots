@@ -1,0 +1,202 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+    columns: 0
+    lines: 0
+
+  padding:
+    x: 0
+    y: 0
+
+  decorations: full
+
+scrolling:
+  multiplier: 1
+
+# Font configuration
+font:
+  normal:
+    famaly: monospace
+    style: Regular
+
+  bold:
+    family: monospace
+    style: Bold
+
+  italic:
+    family: monospace
+    style: Italic
+
+  size: 8.0
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  scale_with_dpi: true
+
+  use_thin_strokes: false
+
+draw_bold_text_with_bright_colors: true
+
+# Colors (Tomorrow Night Bright)
+#colors:
+  # Default colors
+  #primary:
+  #  background: '#000000'
+  #  foreground: '#eaeaea'
+
+    # Bright and dim foreground colors
+    #
+    # The dimmed foreground color is calculated automatically if it is not present.
+    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
+    # is `false`, the normal foreground color will be used.
+    #dim_foreground: '#9a9a9a'
+    #bright_foreground: '#ffffff'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor. If these are unset,
+  # the cursor color will be the inverse of the cell color.
+  #cursor:
+  #  text: '#000000'
+  #  cursor: '#ffffff'
+
+  # Selection colors
+  #
+  # Colors which should be used to draw the selection area. If selection
+  # background is unset, selection color will be the inverse of the cell colors.
+  # If only text is unset the cell text color will remain the same.
+  #selection:
+  #  text: '#eaeaea'
+  #  background: '#404040'
+
+  # Normal colors
+  #normal:
+  #  black:   '#000000'
+  #  red:     '#d54e53'
+  #  green:   '#b9ca4a'
+  #  yellow:  '#e6c547'
+  #  blue:    '#7aa6da'
+  #  magenta: '#c397d8'
+  #  cyan:    '#70c0ba'
+  #  white:   '#eaeaea'
+
+  # Bright colors
+  #bright:
+  #  black:   '#666666'
+  #  red:     '#ff3334'
+  #  green:   '#9ec400'
+  #  yellow:  '#e7c547'
+  #  blue:    '#7aa6da'
+  #  magenta: '#b77ee0'
+  #  cyan:    '#54ced6'
+  #  white:   '#ffffff'
+
+  # Dim colors
+  #
+  # If the dim colors are not set, they will be calculated automatically based
+  # on the `normal` colors.
+  #dim:
+  #  black:   '#000000'
+  #  red:     '#8c3336'
+  #  green:   '#7a8530'
+  #  yellow:  '#97822e'
+  #  blue:    '#506d8f'
+  #  magenta: '#80638e'
+  #  cyan:    '#497e7a'
+  #  white:   '#9a9a9a'
+
+  # Indexed Colors
+  #
+  # The indexed colors include all colors from 16 to 256.
+  # When these are not set, they're filled with sensible defaults.
+  #
+  # Example:
+  #   `- { index: 16, color: '#ff00ff' }`
+  #
+  #indexed_colors: []
+
+# BEGIN ACE
+colors:
+  primary:
+    background: '0x141312'
+    foreground: '0xdecabe'
+  cursor:
+    text:       '0x141312'
+    cursor:     '0xdecabe'
+  normal:
+    black:      '0x141312'
+    red:        '0x8D402A'
+    green:      '0x935236'
+    yellow:     '0x9F6D53'
+    blue:       '0xB8845A'
+    magenta:    '0xB5896F'
+    cyan:       '0xC69676'
+    white:      '0xdecabe'
+  bright:
+    black:      '0x9b8d85'
+    red:        '0x8D402A'
+    green:      '0x935236'
+    yellow:     '0x9F6D53'
+    blue:       '0xB8845A'
+    magenta:    '0xB5896F'
+    cyan:       '0xC69676'
+    white:      '0xdecabe'
+
+# END ACE
+
+visual_bell:
+  animation: EaseOutExpo
+  duration: 0
+
+background_opacity: 0.75
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  faux_scrolling_lines: 1
+  hide_when_typing: false
+
+cursor:
+  style: Block
+  unfocused_hollow: true
+
+dynamic_title: true
+
+live_config_reload: true
+
+shell:
+  program: /bin/zsh
+
+key_bindings:
+  - { key: V,        mods: Control, action: Paste            }
+  - { key: C,        mods: Control|Shift, action: Copy             }
+  - { key: Insert,   mods: Shift,         action: PasteSelection   }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Add,      mods: Control,       action: IncreaseFontSize }
+  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
+  - { key: L,         mods: Control, action: ClearLogNotice                   }
+  - { key: L,         mods: Control, chars: "\x0c"                            }
+  - { key: PageUp,    mods: Shift,   action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown,  mods: Shift,   action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
+  - { key: Return,    mods: Shift,   action: SpawnNewInstance }
