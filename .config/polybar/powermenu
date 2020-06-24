@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+
+## Author: Aditya Shakya (adi1090x)
+## from https://github.com/adi1090x/polybar-themes/blob/master/polybar-13/scripts/powermenu_alt
+
+rofi_cmd="rofi -theme $HOME/.config/rofi/config.rasi"
+
+uptime=$(uptime -p | sed -e 's/up //g')
+
+#options
+shutdown=" Shutdown"
+reboot=" Restart"
+lock=" Lock"
+suspend=" Suspend"
+logout=" Logout"
+
+# pass the variables
+options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
+
+chosen="$(echo -e "$options" | $rofi_cmd -p "System" -dmenu -selected-row 0)"
+case $chosen in 
+    $shutdown)
+    	systemctl poweroff
+	;;
+    $reboot)
+    	systemctl reboot
+	;;
+    $lock)
+    	i3lock
+	;;
+    $suspend)
+       mpc -q pause
+       systemctl suspend
+       ;;
+    $logout)
+       session=$(loginctl session-status | awk 'NR==1{print $1}')
+       loginctl terminate-session $session
+       ;;
+esac

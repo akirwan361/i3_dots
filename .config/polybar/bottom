@@ -1,0 +1,159 @@
+[colors]
+
+background        = ${xrdb:background} 
+foreground        = ${xrdb:foreground}
+foreground-alt    = ${xrdb:color3}
+alert             = ${xrdb:color10}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[bar/bottom]
+monitor             = ${env:MONITOR:}
+; eDP1
+width               = 100%
+height              = 32
+fixed-center        = true
+
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+
+padding-left        = 2
+padding-right       = 2
+module-margin-left  = 4
+module-margin-right = 4
+
+bottom              = true
+
+font-0	            = "Fira Code:size:8,3"
+;"Ubuntu Mono:size:8;3"
+font-1	            = "FontAwesome:size=8;2"
+font-2              = "Material Icons:size-21;4"
+
+scroll-up           = i3wm-wsnext
+scroll-down         = i3wm-wsprev
+cursor-click        = pointer
+
+modules-left        = menu i3 term
+modules-right       = vpn pulseaudio powermenu
+;term files browser settings title
+;modules-center      = mpd
+;modules-right       = pulseaudio
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/menu]
+type                    = custom/text
+content                 = 
+content-padding         = 2
+content-background      = ${colors.background}
+content-foreground      = ${colors.foreground}
+#click-left              = xfce4-popup-whiskermenu -p
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/term]
+type                    = custom/text
+;content                 = 
+content                 ="$_"
+content-foreground      = ${colors.foreground-alt}
+click-left              = alacritty &
+;i3-sensible-terminal &
+;xfce4-terminal &
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/powermenu]
+type 		   	   = custom/text
+content 		   = 
+content-padding  	   = 2
+content-background	   = ${colors.background}
+content-foreground	   = ${colors.foreground}
+click-left                 = "sh ~/.config/polybar/powermenu"
+; $HOME/.config/polybar/powermenu
+click-right 		   = echo right
+click-middle 		   = echo middle
+;type                      = custom/menu
+
+;label-open                = 
+;label-close               = x
+;label-separator           = " | "
+;expand-right              = true
+;menu-0-0                  = Power
+;menu-0-0-exec             = menu-open-1
+;#menu-0-1                  = Reboot
+;#menu-0-1-exec             = menu-open-2
+;
+;menu-1-0                  = Shutdown
+;menu-1-0-exec             = shutdown &
+;menu-1-1                  = Reboot
+;menu-1-1-exec             = reboot &
+;menu-1-2                  = Suspend
+;menu-1-2-exec             = systemctl suspend &
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;type                    = custom/text
+;content                 = 
+;content-padding         = 2
+;content-background      = ${colors.background}
+;content-foreground      = ${colors.foreground-alt}
+;click-left              = ~/.config/polybar/powermenu
+;xfce4-session-logout
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/vpn]
+type                            = custom/script
+exec                            = echo pia-client --quiet
+exec-if                         = pgrep -x /opt/piavpn/bin/pia-client
+interval                        = 5
+format-underline                = ${colors.background}
+format-prefix                   = "🖧 "
+format-prefix-foreground        = ${colors.foreground-alt}
+;/opt/piavpn/bin/pia-client --quiet
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/i3]
+type 	                        = internal/i3
+format 				                = <label-state> <label-mode>
+index-sort                    = true
+wrapping-scroll               = false
+
+label-mode                    = %mode%
+label-mode-padding 		        = 2
+label-mode-foreground         = ${colors.foreground-alt}
+;label-mode-background 		    = ${colors.background}
+
+label-focused                 = %index%
+label-focused-foreground 	    = ${colors.foreground-alt}
+label-focused-background 	    =
+label-focused-padding 		    = 2
+
+label-visible                 = %index%
+label-visible-underline 	    =
+label-visible-padding         = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/pulseaudio]
+type                            = internal/pulseaudio
+
+sink                            = alsa_output.pci-0000_00_1f.3.analog-stereo
+
+use-ui-max                      = true
+interval                        = 5
+
+master-soundcard                = hw:1
+format-volume                   = <bar-volume>
+bar-volume-width                = 25
+bar-volume-foreground-0         = ${colors.foreground}
+bar-volume-foreground-1         = ${colors.foreground}
+bar-volume-foreground-2         = ${colors.foreground}
+bar-volume-foreground-3         = ${colors.foreground}
+bar-volume-foreground-4         = ${colors.foreground}
+bar-volume-foreground-5         = ${colors.alert}
+bar-volume-foreground-6         = #ff5555
+bar-volume-gradient             = true
+bar-volume-indicator            = +
+bar-volume-indicator-foreground = ${colors.foreground}
+bar-volume-fill                 = -
+bar-volume-empty                = -
+bar-volume-empty-foreground     = ${colors.foreground-alt}
+label-muted                     = ------- muted --------
+label-muted-foreground          = ${colors.foreground-alt}
+
+click-right                     = pavucontrol &
