@@ -57,8 +57,10 @@ icon_connect=
 icon_fav=
 icon_country=
 rofi_font="Monospace 12"
-rofi_theme="$HOME/.config/rofi/colors-rofi-dark.rasi"
-rofi_location="-location 5 -xoffset -50 -yoffset -50"
+rofi_theme="network.rasi"
+#"colors.rasi"
+#"$HOME/.config/rofi/colors-rofi-dark.rasi"
+# rofi_location="-location 5 -xoffset -100 -yoffset -50"
 rofi_menu_name="PIA VPN"
 
 # These are country codes taken from `piactl get regions`. 
@@ -106,7 +108,7 @@ vpn_location_menu() {
 	if hash rofi 2>/dev/null; then
 
 		MENU="$(rofi \
-			-font "$rofi_font" -theme $rofi_theme $rofi_location \
+			-font "$rofi_font" -theme $rofi_theme \ # $rofi_location \
 			-columns 1 -width 10 -hide-scrollbar \
 			-line-padding 4 -padding 20 -lines 9 \
 			-sep "|" -dmenu -i -p "$rofi_menu_name" <<< \
