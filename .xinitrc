@@ -87,3 +87,5 @@ wal -R
 #betterlockscreen -w dim
 source ~/.fehbg
 
+# start compton 
+compton -b --config ~/.config/picom/picom.conf
