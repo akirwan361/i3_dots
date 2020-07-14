@@ -32,7 +32,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set picom/compton as the compositor?
-exec --no-startup-id compton &
+# exec --no-startup-id compton --config ~/.config/compton/compton.conf
+# exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -72,8 +73,8 @@ bindsym $mod+minus scratchpad show
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id rofi -show drun 
 # bar toggle, hide or show
 bindsym $mod+m bar mode toggle
 
@@ -247,7 +248,10 @@ for_window [class="^vlc"] floating enable
 #for_window [class="^Ncmpcpp$"] floating enable
 
 # launch polybar on startup
-exec --no-startup-id $HOME/.config/polybar/launch.sh
+#exec --no-startup-id "sh $HOME/.config/polybar/launch.sh"
 
 # sometimes when changing monitors, it sticks. reload it
-bindsym $mod+p exec $HOME/.config/polybar/launch.sh
+bindsym $mod+shift+p exec --no-startupd-id ~/.config/polybar/launch.sh
+
+# start up udiskie
+exec --no-startup-id udiskie &
