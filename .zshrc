@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:"${PATH}:${HOME}/.local/bin/":$PATH
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/voekreb/.oh-my-zsh"
@@ -107,3 +109,10 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 alias dotfig='/usr/bin/git --git-dir=/home/voekreb/.dotfiles/ --work-tree=/home/voekreb'
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+eval "$(pyenv init -)"
+
+eval "$(pyenv virtualenv-init -)"
+
