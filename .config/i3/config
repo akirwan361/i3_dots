@@ -16,10 +16,6 @@ set $mod Mod4
 #font pango:monospace 8
 font xft:URWGothic-Book 11
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -32,15 +28,28 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set picom/compton as the compositor?
-# exec --no-startup-id compton --config ~/.config/compton/compton.conf
-# exec --no-startup-id picom --config ~/.config/picom/picom.conf
+exec --no-startup-id compton --config ~/.config/compton/compton.conf
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle  && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec changeVolume +2% 
+bindsym XF86AudioLowerVolume exec changeVolume -2% 
+#bindsym XF86AudioMute exec changeVolume 0% && dunstify -u low -i "mic muted"
+
+
+# bindsym $mod+shift+u exec changeVolume 2dB+ unmute
+# brightness keys
+# increase
+#bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'brightness up'"
+bindsym XF86MonBrightnessUp exec changeBrightness incr 
+bindsym XF86MonBrightnessDown exec changeBrightness decr
+
+# decrease
+# bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
 
 # Set a suspend key?
 bindsym Ctrl+shift+s exec systemctl suspend
@@ -63,17 +72,7 @@ bindsym $mod+Shift+minus move scratchpad
 # show first scratchpad window
 bindsym $mod+minus scratchpad show
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id dmenu_recency
-
-# start the xfce-menu
-# bindsym $mod+d exec xfce4-popup-whiskermenu
-
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# set rofi as the default app menu
 bindsym $mod+d exec --no-startup-id rofi -show drun 
 # bar toggle, hide or show
 bindsym $mod+m bar mode toggle
@@ -205,16 +204,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# brightness keys
-# increase
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-
-# decrease
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
-
-# xfce panel
-# exec_always --no-startup-id xfce4-panel --disable-wm-check
-
 # get rid of the hideous borders
 
 default_border none
@@ -243,15 +232,19 @@ assign [class="Atom"] $ws2
 for_window [class="^matplotlib"] floating enable
 for_window [class="QFitsView_4.0"] floating enable
 for_window [class="^vlc"] floating enable
+for_window [class="^ds9.tcl"] floating enable
 # enable float for a few windows, like ncmpcpp and cava
 #for_window [class="^Cava$"] floating enable
 #for_window [class="^Ncmpcpp$"] floating enable
 
 # launch polybar on startup
-#exec --no-startup-id "sh $HOME/.config/polybar/launch.sh"
+exec --no-startup-id "sh $HOME/.config/polybar/launch.sh"
 
 # sometimes when changing monitors, it sticks. reload it
 bindsym $mod+shift+p exec --no-startupd-id ~/.config/polybar/launch.sh
 
 # start up udiskie
 exec --no-startup-id udiskie &
+
+# autostart dunst 
+exec --no-startup-id dunst
