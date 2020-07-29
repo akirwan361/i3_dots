@@ -33,7 +33,7 @@ scroll-down         = i3wm-wsprev
 cursor-click        = pointer
 
 modules-left        = menu i3 term
-modules-right       = vpn pulseaudio powermenu
+modules-right       = vpn pulseaudio-control powermenu
 ;term files browser settings title
 ;modules-center      = mpd
 ;modules-right       = pulseaudio
@@ -44,8 +44,8 @@ type                    = custom/text
 content                 = 
 content-padding         = 2
 content-background      = ${colors.background}
-content-foreground      = ${colors.foreground}
-#click-left              = xfce4-popup-whiskermenu -p
+content-foreground      = ${colors.alert}
+click-left              = exec rofi -show drun &
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -64,7 +64,7 @@ type 		   	   = custom/text
 content 		   = 
 content-padding  	   = 2
 content-background	   = ${colors.background}
-content-foreground	   = ${colors.foreground}
+content-foreground	   = ${colors.alert}
 click-left                 = "sh ~/.config/polybar/powermenu"
 ; $HOME/.config/polybar/powermenu
 click-right 		   = echo right
@@ -96,36 +96,33 @@ click-middle 		   = echo middle
 ;xfce4-session-logout
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[module/vpn]
-type                            = custom/script
-exec                            = echo pia-client --quiet
-exec-if                         = pgrep -x /opt/piavpn/bin/pia-client
-interval                        = 5
-format-underline                = ${colors.background}
-format-prefix                   = "🖧 "
-format-prefix-foreground        = ${colors.foreground-alt}
-;/opt/piavpn/bin/pia-client --quiet
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/i3]
-type 	                        = internal/i3
-format 				                = <label-state> <label-mode>
-index-sort                    = true
-wrapping-scroll               = false
+type 				= internal/i3
+format 				= <label-state> <label-mode>
+index-sort 			= false
+wrapping-scroll 		= false
 
-label-mode                    = %mode%
-label-mode-padding 		        = 2
-label-mode-foreground         = ${colors.foreground-alt}
-;label-mode-background 		    = ${colors.background}
+;label-mode 			= %mode%
+label-mode-padding 		= 2
+label-mode-foreground 		= ${colors.foreground-alt}
+;label-mode-background 		= ${colors.background}
 
-label-focused                 = %index%
-label-focused-foreground 	    = ${colors.foreground-alt}
-label-focused-background 	    =
-label-focused-padding 		    = 2
+; focused = active workspace on current monitor
+label-focused 			= 
+label-focused-foreground 	= ${colors.foreground-alt}
+label-focused-background 	=
+label-focused-padding 		= 2
 
-label-visible                 = %index%
-label-visible-underline 	    =
-label-visible-padding         = 2
+; visible = active workspace on any unfocused monitor
+label-visible 			= 
+label-visible-underline 	=
+label-visible-padding 		= 2
+
+; unfocused = inactive workspace on any monitor
+label-unfocused 		= 
+label-unfocused-foreground 	= ${colors.foreground-alt}
+label-unfocused-paddings 	= 2
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -156,4 +153,22 @@ bar-volume-empty-foreground     = ${colors.foreground-alt}
 label-muted                     = ------- muted --------
 label-muted-foreground          = ${colors.foreground-alt}
 
-click-right                     = pavucontrol &
+click-right                     = exec pavucontrol &
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/pulseaudio-control]
+type 				= custom/script
+tail 				= true
+label 				= %output%
+format-underline 		= ${colors.foreground-alt}
+
+exec 				= ~/.config/polybar/pa-ctl.sh listen
+click-right 			= exec pavucontrol &
+click-left 			= ~/.config/polybar/pa-ctl.sh togmute
+click-middle 			= ~/.config/polybar/pa-ctl.sh next-sink
+scroll-up			= ~/.config/polybar/pa-ctl.sh up
+scroll-down 			= ~/.config/polybar/pa-ctl.sh down
+label-padding 			= 2
+label-foreground 		= ${colors.foreground-alt} 
+
+
