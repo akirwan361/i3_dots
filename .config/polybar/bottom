@@ -9,43 +9,47 @@ alert             = ${xrdb:color10}
 [bar/bottom]
 monitor             = ${env:MONITOR:}
 ; eDP1
-width               = 100%
+width               = 100%:-50
 height              = 32
 fixed-center        = true
-
+override-redirect   = true 
+offset-x 	    = 2%:-13
 background          = ${colors.background}
 foreground          = ${colors.foreground}
 
 padding-left        = 2
 padding-right       = 2
-module-margin-left  = 4
-module-margin-right = 4
+module-margin-left  = 2
+module-margin-right = 2
 
+wm-restack 	    = i3
 bottom              = true
-
+radius 		    = 7.5
 font-0	            = "Fira Code:size:8,3"
-;"Ubuntu Mono:size:8;3"
-font-1	            = "FontAwesome:size=8;2"
-font-2              = "Material Icons:size-21;4"
+font-1	            = "Iosevka Nerd Font:pixelsize=13;3"
+font-2              = "Material Icons:size=12;4"
+font-3 		    = "icomoon\-feather:size=12;2"
 
 scroll-up           = i3wm-wsnext
 scroll-down         = i3wm-wsprev
 cursor-click        = pointer
 
 modules-left        = menu i3 term
-modules-right       = vpn pulseaudio-control powermenu
-;term files browser settings title
-;modules-center      = mpd
-;modules-right       = pulseaudio
+modules-right       = files media pulseaudio-control powermenu
+;files browser settings title
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/menu]
 type                    = custom/text
-content                 = 
+content 		= 
+;content 		= 
+;content                 = 
 content-padding         = 2
 content-background      = ${colors.background}
-content-foreground      = ${colors.alert}
-click-left              = exec rofi -show drun &
+content-foreground      = ${colors.foreground-alt}
+click-left              = "sh $HOME/.config/polybar/appmenu"
+;rofi -show drun &
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -61,39 +65,14 @@ click-left              = alacritty &
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/powermenu]
 type 		   	   = custom/text
-content 		   = 
+content 		   =  
+;content 		   = 
 content-padding  	   = 2
-content-background	   = ${colors.background}
-content-foreground	   = ${colors.alert}
-click-left                 = "sh ~/.config/polybar/powermenu"
-; $HOME/.config/polybar/powermenu
+;content-background	   = ${colors.background}
+content-foreground	   = ${colors.foreground-alt}
+click-left                 = "sh $HOME/.config/polybar/powermenu"
 click-right 		   = echo right
 click-middle 		   = echo middle
-;type                      = custom/menu
-
-;label-open                = 
-;label-close               = x
-;label-separator           = " | "
-;expand-right              = true
-;menu-0-0                  = Power
-;menu-0-0-exec             = menu-open-1
-;#menu-0-1                  = Reboot
-;#menu-0-1-exec             = menu-open-2
-;
-;menu-1-0                  = Shutdown
-;menu-1-0-exec             = shutdown &
-;menu-1-1                  = Reboot
-;menu-1-1-exec             = reboot &
-;menu-1-2                  = Suspend
-;menu-1-2-exec             = systemctl suspend &
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;type                    = custom/text
-;content                 = 
-;content-padding         = 2
-;content-background      = ${colors.background}
-;content-foreground      = ${colors.foreground-alt}
-;click-left              = ~/.config/polybar/powermenu
-;xfce4-session-logout
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -102,28 +81,66 @@ type 				= internal/i3
 format 				= <label-state> <label-mode>
 index-sort 			= false
 wrapping-scroll 		= false
+;pin-workspaces 			= true
 
-;label-mode 			= %mode%
+label-mode 			= %mode%
 label-mode-padding 		= 2
 label-mode-foreground 		= ${colors.foreground-alt}
 ;label-mode-background 		= ${colors.background}
 
 ; focused = active workspace on current monitor
-label-focused 			= 
+label-focused 			= ""
 label-focused-foreground 	= ${colors.foreground-alt}
 label-focused-background 	=
 label-focused-padding 		= 2
 
 ; visible = active workspace on any unfocused monitor
-label-visible 			= 
+label-visible 			= ""
 label-visible-underline 	=
 label-visible-padding 		= 2
 
 ; unfocused = inactive workspace on any monitor
-label-unfocused 		= 
+label-unfocused 		= ""
 label-unfocused-foreground 	= ${colors.foreground-alt}
 label-unfocused-paddings 	= 2
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/files]
+type 					= internal/fs 
+mount-0 				= /
+
+interval 				= 10
+fixed-values 				= true 
+spacing					= 2 
+
+format-mounted 				= <label-mounted>
+format-unmounted 			= <label-unmounted>
+
+format-mounted-prefix			= "  "
+label-mounted 				= %free%
+label-unmounted 			= %mountpoint%: umnt 
+
+format-mounted-prefix-foreground 	= ${colors.foreground-alt}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/media]
+type 					= internal/fs
+mount-0 				= /mnt/music
+
+interval 				= 10
+fixed-values 				= true
+spacing 				= 2
+
+format-mounted 				= <label-mounted>
+format-unmounted 			= <label-unmounted>
+
+format-mounted-prefix 			= "  "
+label-mounted 				= %free% 
+label-unmounted 			= umnt 
+
+format-mounted-prefix-foreground 	= ${colors.foreground-alt}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [module/pulseaudio]
@@ -162,13 +179,15 @@ tail 				= true
 label 				= %output%
 format-underline 		= ${colors.foreground-alt}
 
+format-prefix 	 		= "" 
 exec 				= ~/.config/polybar/pa-ctl.sh listen
 click-right 			= exec pavucontrol &
 click-left 			= ~/.config/polybar/pa-ctl.sh togmute
 click-middle 			= ~/.config/polybar/pa-ctl.sh next-sink
 scroll-up			= ~/.config/polybar/pa-ctl.sh up
 scroll-down 			= ~/.config/polybar/pa-ctl.sh down
-label-padding 			= 2
-label-foreground 		= ${colors.foreground-alt} 
+label-padding 			= 1
+label-foreground 		= ${colors.foreground}
+format-prefix-foreground 	= ${colors.foreground-alt}
 
 
