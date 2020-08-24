@@ -40,8 +40,6 @@ endif
 
 Plug 'ervandew/supertab'
 
-" add jedi
-Plug 'davidhalter/jedi-vim' 
 " add the pywal plugin 
 Plug 'dylanaraps/wal.vim'
 " colorscheme wal 

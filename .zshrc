@@ -1,7 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:"${PATH}:${HOME}/.local/bin/":$PATH
+
+# make sure pyenv is in your $PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
+# we want neovim as our editor
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/voekreb/.oh-my-zsh"
@@ -11,61 +17,11 @@ export ZSH="/home/voekreb/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="mytheme"
-#"frontcube"
-#"nebirhos"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -75,8 +31,8 @@ ZSH_THEME="mytheme"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-# aliases 
 
+# custom aliases 
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
@@ -85,17 +41,24 @@ alias more=less
 
 alias vim='nvim'
 alias la='ls -a'
-alias ds9="$HOME/SAOImageDS9/bin/ds9"
-alias qfits="$HOME/QFitsView/QFitsView_4.0"
+
 alias signal="signal-desktop"
 alias ...="../.."
-# ESO's guide-cam-tool
-alias guct="$HOME/GUCT/GuideCamTool-linux-2.1.0/bin/GuideCamTool"
+alias pmixer='python3 /usr/local/bin/pulsectl_mixer.py'
+# for the workflow
+alias guct="$HOME/GUCT/GuideCamTool-linux-2.1.0/bin/GuideCamTool"	 
+alias qfits="$HOME/QFitsView/QFitsView_4.0"			
+alias ds9="/usr/bin/ds9"
+alias ciao="source $HOME/ciao_env/ciao-4.12/bin/ciao.bash"
+# we'll need to sort out the virtual envs sometime...
 # telassar python venv
 alias telassar="source $HOME/Documents/telassar/env/bin/activate"
 
 # pyreduc python venv
 alias pyred="source $HOME/Docoments/pyreduc/pyreduce/bin/activate"
+
+# make sure ipython loads the right instance, ie if in virtual env or not
+alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 
 # Some pywal stuff
 # &   # run in the background
@@ -105,14 +68,15 @@ alias pyred="source $HOME/Docoments/pyreduc/pyreduce/bin/activate"
 # in case you want to use ttys
 source ~/.cache/wal/colors-tty.sh
 
-export VISUAL=nvim
-export EDITOR="$VISUAL"
-
+# for managing dotfiles
 alias dotfig='/usr/bin/git --git-dir=/home/voekreb/.dotfiles/ --work-tree=/home/voekreb'
+
+# from the pyenv/virtualenv github
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
+
 
