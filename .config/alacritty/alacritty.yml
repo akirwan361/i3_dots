@@ -20,15 +20,15 @@ scrolling:
 # Font configuration
 font:
   normal:
-    famaly: monospace
+    family: Fira Code
     style: Regular
 
   bold:
-    family: monospace
+    family: Fira Code #: monospace
     style: Bold
 
   italic:
-    family: monospace
+    family: Fira Code #monospace
     style: Italic
 
   size: 8.0
@@ -128,33 +128,33 @@ draw_bold_text_with_bright_colors: true
 # BEGIN ACE
 colors:
   primary:
-    background: '0x141312'
-    foreground: '0xdecabe'
+    background: '0x0D0E08'
+    foreground: '0xc9c1c2'
   cursor:
-    text:       '0x141312'
-    cursor:     '0xdecabe'
+    text:       '0x0D0E08'
+    cursor:     '0xc9c1c2'
   normal:
-    black:      '0x141312'
-    red:        '0x8D402A'
-    green:      '0x935236'
-    yellow:     '0x9F6D53'
-    blue:       '0xB8845A'
-    magenta:    '0xB5896F'
-    cyan:       '0xC69676'
-    white:      '0xdecabe'
+    black:      '0x0D0E08'
+    red:        '0x8C5634'
+    green:      '0x8F6A67'
+    yellow:     '0x618B32'
+    blue:       '0x66905D'
+    magenta:    '0x949468'
+    cyan:       '0x8B8288'
+    white:      '0xc9c1c2'
   bright:
-    black:      '0x9b8d85'
-    red:        '0x8D402A'
-    green:      '0x935236'
-    yellow:     '0x9F6D53'
-    blue:       '0xB8845A'
-    magenta:    '0xB5896F'
-    cyan:       '0xC69676'
-    white:      '0xdecabe'
+    black:      '0x8c8787'
+    red:        '0x8C5634'
+    green:      '0x8F6A67'
+    yellow:     '0x618B32'
+    blue:       '0x66905D'
+    magenta:    '0x949468'
+    cyan:       '0x8B8288'
+    white:      '0xc9c1c2'
 
 # END ACE
 
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
 
@@ -177,7 +177,7 @@ cursor:
   style: Block
   unfocused_hollow: true
 
-dynamic_title: true
+window.dynamic_title: true
 
 live_config_reload: true
 

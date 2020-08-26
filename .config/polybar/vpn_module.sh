@@ -35,14 +35,15 @@
 
 ## @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 ## User Settings
-
+# echo $(pgrep -u $UID -x piactl)
 # Set commands for PIA VPN.
-VPNCOMMAND_CONNECT="piactl connect"
+VPNCOMMAND_CONNECT="/usr/local/bin/piactl connect"
+VPNCOMMAND_RUN_BACKGROUND="/usr/local/bin/piactl background enable"
 # echo $VPNCOMMAND_CONNECT
-VPNCOMMAND_DISCONNECT="piactl disconnect"
-VPNCOMMAND_STATUS="piactl get connectionstate"
-VPNCOMMAND_GET_REGION="piactl get region"
-VPNCOMMAND_RELAY_SET_LOCATION="piactl set region"
+VPNCOMMAND_DISCONNECT="/usr/local/bin/piactl disconnect"
+VPNCOMMAND_STATUS="/usr/local/bin/piactl get connectionstate"
+VPNCOMMAND_GET_REGION="/usr/local/bin/piactl get region"
+VPNCOMMAND_RELAY_SET_LOCATION="/usr/local/bin/piactl set region"
 
 VPN_STATUS="$($VPNCOMMAND_STATUS | cut -d' ' -f3)"	# Connected/Connecting/... 
 CONNECTED=Connected   
@@ -57,7 +58,7 @@ icon_connect=
 icon_fav=
 icon_country=
 rofi_font="Monospace 12"
-rofi_theme="network.rasi"
+rofi_theme="$HOME/.config/polybar/network.rasi"
 #"colors.rasi"
 #"$HOME/.config/rofi/colors-rofi-dark.rasi"
 # rofi_location="-location 5 -xoffset -100 -yoffset -50"
@@ -76,6 +77,23 @@ VPN_CODES=("${VPN_LOCATIONS[@]}")
 VPN_CODES+=("${COUNTRY_CODES[@]}")
 VPN_LOCATIONS+=("${COUNTRIES[@]}")
 # echo $VPN_CODES
+
+# TODO: do we need to check that the daemon is running before launch?
+vpn_check() {
+	#if ps aux | grep pia-daemon > /dev/null; then
+	#	echo "Running Fine"
+	#else
+	#	${$VPNCOMMAND_RUN_BACKGROUND}
+	#fi
+	
+	if ps aux | grep pia-client > /dev/null; then
+		echo "Client okay"
+	else
+		echo "What the hell?"
+	fi
+
+
+}
 
 vpn_report() {
 # continually reports connection status
@@ -199,5 +217,6 @@ case "$1" in
     --toggle-connection) vpn_toggle_connection ;;
 	--location-menu) vpn_location_menu ;;
 	*) vpn_report ;;
+#	*) vpn_check ;;
 esac
 

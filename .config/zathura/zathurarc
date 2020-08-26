@@ -16,7 +16,7 @@ set guioptions ""
 # zathurarc-dark
 
 set font "inconsolata 15"
-set default-bg rbga(0,0,0,0.7)
+set default-bg rbga(0,0,0,0.8)
 # set default-bg "#2a2426"
 set default-fg "#decabe"
 
@@ -55,7 +55,8 @@ set recolor-darkcolor "#E0E0E0" #06
 set recolor-reverse-video "true"
 set recolor-keephue "false"
 
-
+# maybe this will fix the dual page layout
+set first-page-column "1"
 set render-loading "false"
 set scroll-step 50
 unmap f

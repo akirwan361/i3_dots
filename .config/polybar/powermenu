@@ -3,7 +3,7 @@
 ## Author: Aditya Shakya (adi1090x)
 ## from https://github.com/adi1090x/polybar-themes/blob/master/polybar-13/scripts/powermenu_alt
 
-rofi_cmd="rofi -theme $HOME/.config/rofi/config.rasi"
+rofi_cmd="rofi -theme $HOME/.config/polybar/power.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
@@ -17,7 +17,9 @@ logout=" Logout"
 # pass the variables
 options="$lock\n$suspend\n$logout\n$reboot\n$shutdown"
 
-chosen="$(echo -e "$options" | $rofi_cmd -p "System" -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_cmd -p "System" -dmenu \
+	-location 5 -anchor 5 -xoffset -10 -yoffset -40 \
+	-selected-row 0)"
 case $chosen in 
     $shutdown)
     	systemctl poweroff

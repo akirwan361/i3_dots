@@ -36,15 +36,15 @@ prompt {
 
 textbox-prompt-colon {
     expand:			false;
-    str:			"";
+    str:			":";
     background-color:		@background;
     text-color:			@urgent-background;
     padding:			4px 0px 0px 8px;
-    font:			"monospace 8";
+    font:			"monospace 12";
 }
 
 inputbar {
-    children:			[ textbox-prompt-color, prompt ];
+    children:			[ textbox-prompt-colon, prompt ];
     background-color:		@background;
     text-color:			@foreground;
     expand:			false;

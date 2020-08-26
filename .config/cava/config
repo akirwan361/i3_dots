@@ -110,10 +110,10 @@ foreground = cyan
  gradient = 1
 # gradient_color_1 = '#0099ff'
 # gradient_color_2 = '#ff3399'
-#gradient_color_1 = '#635657'
-#gradient_color_2 = '#9a9390'
-gradient_color_1 = "#ea999a"
-gradient_color_2 = "#f6aead"
+gradient_color_1 = '#618b32'
+gradient_color_2 = '#66905d'
+#gradient_color_1 = "#ea999a"
+#gradient_color_2 = "#f6aead"
 
 [smoothing]
 
