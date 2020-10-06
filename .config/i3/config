@@ -28,6 +28,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# the xfce4 power manager is good
+exec_always --no-startup-id xfce4-power-manager 
+
 # Set picom/compton as the compositor?
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 
@@ -81,8 +84,8 @@ bindsym $mod+m bar mode toggle
 # set the gaps
 gaps inner 13
 gaps outer 15
-gaps top 25
-gaps bottom 25
+gaps top 29
+gaps bottom 29
 
 # change focus
 bindsym $mod+j focus left
@@ -208,49 +211,29 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # get rid of the hideous borders
-
 default_border none
 default_floating_border none
 hide_edge_borders both
 
-# colors from xresouces
-#set_from_resource $bg  color0  #f0f0f0
-#set_from_resource $fg  color2  #f0f0f0
-#set_from_resource $bg2 color4  #f0f0f0
-#set_from_resource $fg2 color4  #f0f0f0
-#set_from_resource $fg4 color5  #f0f0f0
-#set_from_resource $bg3 color2  #f0f0f0
-#set_from_resource $bg4 color6  #f0f0f0
-#set_from_resource $fg3 color7  #f0f0f0
-#
-## class			border 	bkgrd 	text	indic.  child_border
-#client.focused		$fg3	$bg 	$fg 	$fg3 	$fg3
-#client.focused_inactive	$fg2	$bg	$fg 	$fg2 	$fg2 
-#client.unfocused	$fg2	$bg 	$fg 	$fg2 	$fg2
-#client.urgent		$fg4	$bg 	$fg 	$fg4 	$fg4 
-#client.placeholder	$fg2	$bg 	$fg 	$fg2 	$fg2
-#client.background	$fg2 	$bg
-
 # let's try to set the betterlockscreen
 # set desktop background with custom effect
 exec --no-startup-id betterlockscreen -u $(cat ~/.cache/wal/wal)
-#source ~/.fehbh 
-#-w dim
 
 # keybind it
 bindsym $mod+Shift+x exec betterlockscreen -l blur 
 
 # assign some programs to certain workspaces?
-assign [class="Atom"] $ws2
+assign [class="firefox"] $ws1 
+# assign [class="^vlc"] $ws2
+assign [class="Zathura"] $ws3
+for_window [title="ranger"] move to workspace $ws4
+for_window [title="ncmpcpp"] move to workspace $ws5 
+for_window [title="cava"] move to workspace $ws5
 
 # make sure python plots have floating windows 
 for_window [class="^matplotlib"] floating enable
 for_window [class="QFitsView_4.0"] floating enable
-for_window [class="^vlc"] floating enable
-for_window [class="^ds9.tcl"] floating enable
-# enable float for a few windows, like ncmpcpp and cava
-#for_window [class="^Cava$"] floating enable
-#for_window [class="^Ncmpcpp$"] floating enable
+for_window [title="SAOImage ds9"] floating enable
 
 # launch polybar on startup
 exec --no-startup-id "sh $HOME/.config/polybar/launch.sh"
