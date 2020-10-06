@@ -35,7 +35,7 @@ scroll-down         = i3wm-wsprev
 cursor-click        = pointer
 
 modules-left        = menu i3 term
-modules-right       = files media pulseaudio-control powermenu
+modules-right       = files pulseaudio-control powermenu
 ;files browser settings title
 
 
@@ -89,20 +89,22 @@ label-mode-foreground 		= ${colors.foreground-alt}
 ;label-mode-background 		= ${colors.background}
 
 ; focused = active workspace on current monitor
-label-focused 			= ""
+label-focused 			= 
+label-focused-font 		= 3 
 label-focused-foreground 	= ${colors.foreground-alt}
 label-focused-background 	=
-label-focused-padding 		= 2
+label-focused-padding 		= 1
 
 ; visible = active workspace on any unfocused monitor
-label-visible 			= ""
-label-visible-underline 	=
-label-visible-padding 		= 2
+label-visible 			= 
+label-visible-font 		= 3 
+label-visible-padding 		= 1
 
 ; unfocused = inactive workspace on any monitor
-label-unfocused 		= ""
+label-unfocused 		= 
+label-unfocused-font 		= 2
 label-unfocused-foreground 	= ${colors.foreground-alt}
-label-unfocused-paddings 	= 2
+label-unfocused-padding 	= 1
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -190,4 +192,32 @@ label-padding 			= 1
 label-foreground 		= ${colors.foreground}
 format-prefix-foreground 	= ${colors.foreground-alt}
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/i3_alt]
 
+type = internal/i3
+format = <label-state> <label-mode>
+format-padding = 1
+format-background = ${colors.background}
+format-foreground = ${colors.foreground-alt}
+index-sort = true
+wrapping-scroll = false
+
+enable-click = true
+reverse-scroll = false
+
+label-focused = 
+label-focused-font = 3
+label-focused-foreground = ${colors.foreground-alt}
+label-focused-padding = 1
+
+label-unfocused = 
+;
+label-unfocused-font = 2
+label-unfocused-padding = 1
+label-unfocused-foreground = ${colors.alert}
+
+label-urgent = 
+label-urgent-font = 1
+label-urgent-padding = 1
+label-urgent-foreground = ${colors.background}
