@@ -15,7 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 #font pango:monospace 8
 #font xft:URWGothic-Book 11
-font xft:Fira Code Retina 11
+font xft:Fira Code Retina 9
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -65,7 +65,7 @@ bindsym Print exec scrot $HOME/Pictures/'Screenshot+%Y-%m-%d_%H:%M:%S'.png
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty &
+bindsym $mod+Return exec --no-startup-id alacritty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -77,9 +77,13 @@ bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # set rofi as the default app menu
-bindsym $mod+d exec --no-startup-id rofi -show drun 
+bindsym $mod+d exec --no-startup-id rofi -show drun -display-drun "Applications" \
+	-drun-display-format "{name}" -show-icons 
+# bindsym $mod+p exec --no-startup-id rofi -show ssh -display-ssh "SSH Clients" \
+bindsym $mod+p exec --no-startup-id rofi -show window -display-window "Windows" \
+	-window-format "{w} {n} {r}"
 # bar toggle, hide or show
-bindsym $mod+m bar mode toggle
+# bindsym $mod+m bar mode toggle
 
 # set the gaps
 gaps inner 13
@@ -224,11 +228,11 @@ bindsym $mod+Shift+x exec betterlockscreen -l blur
 
 # assign some programs to certain workspaces?
 assign [class="firefox"] $ws1 
-# assign [class="^vlc"] $ws2
-assign [class="Zathura"] $ws3
-for_window [title="ranger"] move to workspace $ws4
-for_window [title="ncmpcpp"] move to workspace $ws5 
-for_window [title="cava"] move to workspace $ws5
+# for_window [class="^vlc"] move to workspace $ws3; workspace $ws3
+assign [class="Zathura"] $ws2
+#for_window [title="^ranger"] move to workspace $ws4
+#for_window [title="^ncmpcpp"] move to workspace $ws5 
+#for_window [title="^cava"] move to workspace $ws5
 
 # make sure python plots have floating windows 
 for_window [class="^matplotlib"] floating enable
@@ -236,13 +240,18 @@ for_window [class="QFitsView_4.0"] floating enable
 for_window [title="SAOImage ds9"] floating enable
 
 # launch polybar on startup
-exec --no-startup-id "sh $HOME/.config/polybar/launch.sh"
+exec --no-startup-id sh $HOME/.config/polybar/launch.sh &
 
 # sometimes when changing monitors, it sticks. reload it
-bindsym $mod+Shift+p exec --no-startupd-id "sh $HOME/.config/polybar/launch.sh"
+# bindsym $mod+Shift+p exec --no-startupd-id "sh $HOME/.config/polybar/launch.sh"
 
 # start up udiskie
 exec --no-startup-id udiskie &
 
 # autostart dunst 
-exec --no-startup-id dunst
+exec --no-startup-id dunst &
+
+# configure the tablet keys
+exec --no-startup-id sh ~/tabconfig.sh &
+
+exec --no-startup-id sh ~/.fehbg & 

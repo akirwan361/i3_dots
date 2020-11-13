@@ -18,6 +18,7 @@ height              	= 32
 fixed-center        	= true 
 ;fixed-center 		= false
 offset-x 	    	= 2%:-13
+offset-y 		= 2
 background          	= ${colors.background}
 foreground          	= ${colors.foreground}
 
@@ -31,12 +32,12 @@ wm-restack 		= i3
 
 ; rounded corners yay
 radius 			= 7.5
-font-0 			= "Fira Code:size:8;3"
+font-0 			= "Fira Code:size=12;3"
 font-1              	= "Iosevka Nerd Font:pixelsize=13;3"
 font-2 			= "icomoon\-feather:size=12;2"
 modules-left        	= time wireless 
 ;vpn
-modules-center      	= mpd
+;modules-center      	= mpd
 modules-right       	= battery temp memory cpu 
 
 tray-position       	= none
@@ -48,7 +49,7 @@ type                     = internal/date
 interval                 = 1
 time                     = " %H:%M"
 label                    = %time%
-format-prefix            = " "
+format-prefix            = " "
 format-prefix-foreground = ${colors.foreground-alt}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -62,7 +63,8 @@ interval                           = 1
 accumulate-stats                   = true
 unknown-as-up                      = true
 
-format-connected                   = <label-connected>
+;format-connected                   = <label-connected>
+format-connected 		   = %{A1:$HOME/.config/polybar/wifimenu:}<label-connected>%{A}
 format-disconnected                = <label-disconnected>
 format-packetloss                  = <label-packetloss> <label-connected>
 
@@ -222,6 +224,7 @@ bar-progress-empty                = ─
 bar-progress-empty-font           = 2
 bar-progress-empty-foreground     = $(colors.foreground-alt)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

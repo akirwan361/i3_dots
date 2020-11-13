@@ -1,0 +1,143 @@
+configuration {
+    modi:			"window,run,drun,ssh";
+    font:			"Fira Code Retina 12";
+    show-icons:			false;
+    icon-theme:			"Paper-Mono-Dark";
+    display-drun:		"System";
+    drun-display-format:	"{name}";
+    threads:			0;
+    scroll-method:		0;
+    disable-history:		false;
+    fullscreen:			false;
+    hide-scrollbar:		true;
+    sidebar-mode:		false;
+}
+
+@import "colors.rasi"
+
+window {
+    transparency: 		"real";
+    background-color:		@background;
+    text-color:			@foreground;
+    border-radius:		0px;
+    height: 			23%;
+    width:			12%;
+    location:			5;
+    anchor:			5;
+    x-offset:			-29;
+    y-offset:			-40;
+}
+
+prompt {
+    enabled:			true;
+    padding:			4px 4px 6px 6px;
+    background-color:		@background;
+    text-color:			@foreground;
+}
+
+textbox-prompt-colon {
+    expand:			false;
+    str: 			":";
+    background-color:		@background;
+    text-color:			@foreground;
+    padding:			4px 0px 0px 8px;
+    font:			"Fira Code Retina 12";
+}
+
+inputbar {
+    children:			[ textbox-prompt-colon, prompt ];
+    background-color:		@background;
+    text-color:			@foreground;
+    expand:			false;
+    border:			0px 0px 1px 0px;
+    border-radius:		0px;
+    border-color:		@border-color;
+    margin:			0px 0px 0px 0px;
+    padding:			0px 0px 0px 0px;
+    position:			center;
+}
+
+entry {
+    background-color:		@background;
+    text-color:			@foreground;
+    placeholder-color:		@foreground;
+    expand:			true;
+    horizontal-align:		0;
+    placeholder:		"Search";
+    blink:			true;
+    padding:			4px 0px 0px 0px;
+}
+
+case-indicator {
+    background-color:		@background;
+    text-color:			@foreground;
+    spacing:			0;
+}
+
+listview {
+    background-color:		@background;
+    columns:			1;
+    spacing:			4px;
+    cycle:			true;
+    dynamic:			true;
+    layout:			vertical;
+}
+
+mainbox {
+    background-color:		@background;
+    children: 			[ inputbar, listview ];
+    spacing:			5px;
+    padding:			5px 5px 5px 5px;
+}
+
+element {
+    background-color:		@background;
+    text-color:			@foreground;
+    orientation:		horizontal;
+    border-radius:		4px;
+    padding:			6px 6px 6px 6px;
+}
+
+element-icon {
+    size:			24px;
+    border:			0px;
+}
+
+element-text {
+    expand:			true;
+    horizontal-align:		0;
+    vertical-align:		0;
+    margin:			2px 0px 2px 2px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:		@urgent-background;
+    text-color:			@foreground;
+    border-radius:		9px;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:		@background;
+    text-color:			@foreground;
+}
+
+element selected {
+    background-color:		@selected-active-background;
+    text-color:			@foreground;
+    border:			0px;
+    border-radius:		0px;
+    border-color:		@border-color;
+}
+
+element selected.urgent {
+    background-color:		@selected-urgent-background;
+    text-color:			@foreground;
+}
+
+element selected.active {
+    background-color:		@selected-active-background;
+    color:			@foreground;
+}
+@import "colors-rofi-dark.rasi"

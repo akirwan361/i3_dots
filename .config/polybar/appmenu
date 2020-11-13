@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+rofi -theme $HOME/.config/polybar/menu.rasi \
+	-no-lazy-grab -show drun \
+	-display-drun "Applications" -drun-display-format "{name}" \
+	-location 7 -xoffset 10 -yoffset -40 \
+	-show-icons -icon-theme "Paper-Mono-Dark"
+
+

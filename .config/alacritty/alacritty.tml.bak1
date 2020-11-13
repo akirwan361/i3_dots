@@ -126,31 +126,31 @@ draw_bold_text_with_bright_colors: true
   #indexed_colors: []
 
 # BEGIN ACE
-#colors:
-#  primary:
-#    background: '0x141612'
-#    foreground: '0xbbb8b8'
-#  cursor:
-#    text:       '0x141612'
-#    cursor:     '0xbbb8b8'
-#  normal:
-#    black:      '0x141612'
-#    red:        '0x786134'
-#    green:      '0x6B584C'
-#    yellow:     '0x916037'
-#    blue:       '0x956E5C'
-#    magenta:    '0xC56548'
-#    cyan:       '0xBD8A6C'
-#    white:      '0xbbb8b8'
-#  bright:
-#    black:      '0x828080'
-#    red:        '0x786134'
-#    green:      '0x6B584C'
-#    yellow:     '0x916037'
-#    blue:       '0x956E5C'
-#    magenta:    '0xC56548'
-#    cyan:       '0xBD8A6C'
-#    white:      '0xbbb8b8'
+colors:
+  primary:
+    background: '0x141612'
+    foreground: '0xbbb8b8'
+  cursor:
+    text:       '0x141612'
+    cursor:     '0xbbb8b8'
+  normal:
+    black:      '0x141612'
+    red:        '0x786134'
+    green:      '0x6B584C'
+    yellow:     '0x916037'
+    blue:       '0x956E5C'
+    magenta:    '0xC56548'
+    cyan:       '0xBD8A6C'
+    white:      '0xbbb8b8'
+  bright:
+    black:      '0x828080'
+    red:        '0x786134'
+    green:      '0x6B584C'
+    yellow:     '0x916037'
+    blue:       '0x956E5C'
+    magenta:    '0xC56548'
+    cyan:       '0xBD8A6C'
+    white:      '0xbbb8b8'
 
 # END ACE
 
