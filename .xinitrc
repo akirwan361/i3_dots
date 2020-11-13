@@ -9,15 +9,16 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-# Xfce is kept as default
-SESSION=${1:-xfce}
-
+# Xfce is kept as default, so change it to i3 
+SESSION=${1:-i3}
+#-xfceh
 case $session in
 	i3|i3wm       ) exec i3;;
 	kde           ) exec startplasma-x11;;
 	xfce|xfce4    ) exec startxfce4;;
+	bspwm 	      ) exec bspwm;;
 	# no known session, try to run it as command
-	*             ) exec $1;;
+#	*             ) exec $1;;
 esac
 
 # merge in defaults and keymaps
@@ -51,7 +52,7 @@ get_session(){
 	local dbus_args=(--sh-syntax --exit-with-session)
 	case "$SESSION" in
 		awesome) dbus_args+=(awesome) ;;
-		bspwm) dbus_args+=(bspwm-session) ;;
+		bspwm) dbus_args+=(bspwm) ;;
 		budgie) dbus_args+=(budgie-desktop) ;;
 		cinnamon) dbus_args+=(cinnamon-session) ;;
 		deepin) dbus_args+=(startdde) ;;
@@ -71,8 +72,7 @@ get_session(){
 
 	echo "dbus-launch ${dbus_args[*]}"
 }
-
-exec $(get_session)
+# exec $(get_session)
 
 # turn off the horrid beep
 xset -b
@@ -83,9 +83,18 @@ xset -b
 # start up wal and restore previous colorscheme
 wal -R
 
+
 # set desktop background with custom effect
 #betterlockscreen -w dim
-source ~/.fehbg
+if [ -f $HOME/.fehbg ]; then
+	source $HOME/.fehbg 
+fi
 
-# start compton 
-compton -b --config ~/.config/picom/picom.conf
+# start compton
+if [ -f $HOME/.config/compton/compton.conf ]; then
+	compton -b --config $HOME/.config/compton/compton.conf &
+fi
+# [[ -z $(pgreg -xU $UID mpdscribble) ]] && mpdscribble --conf ~/.mpdscribble/mpdscribble.conf &
+
+exec $(get_session)
+

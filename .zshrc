@@ -1,5 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:"${PATH}:${HOME}/.local/bin/":$PATH
+# export PATH=$HOME/bin:/usr/local/bin:"${PATH}:${HOME}/.local/bin/":$PATH
+SIGPATH="$HOME/signal-cli/build/install/signal-cli/bin"
+export PATH=/usr/local/ssbin:/usr/local/bin:$HOME/bin:/usr/bin:$HOME/.local/bin:$SIGPATH:$HOME/.cargo/bin 
+# add signal cli?
+# export PATH=$HOME/signal-cli/build/install/signal-cli/bin
 
 # make sure pyenv is in your $PATH
 export PYENV_ROOT="$HOME/.pyenv"
@@ -28,8 +32,7 @@ ZSH_THEME="mytheme"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+plugins=(git zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # custom aliases 
@@ -42,7 +45,6 @@ alias more=less
 alias vim='nvim'
 alias la='ls -a'
 
-alias signal="signal-desktop"
 alias ...="../.."
 alias pmixer='python3 /usr/local/bin/pulsectl_mixer.py'
 # for the workflow
@@ -53,10 +55,11 @@ alias ciao="source $HOME/ciao_env/ciao-4.12/bin/ciao.bash"
 # we'll need to sort out the virtual envs sometime...
 # telassar python venv
 alias telassar="source $HOME/Documents/telassar/env/bin/activate"
-
+alias suspend="systemctl suspend"
 # pyreduc python venv
-alias pyred="source $HOME/Docoments/pyreduc/pyreduce/bin/activate"
-
+#alias pyred="source $HOME/Docoments/pyreduc/pyreduce/bin/activate"
+#alias signal-cli="$HOME/signal-cli/build/install/signal-cli/bin/signal-cli"
+alias siggo="$HOME/siggo/bin/siggo"
 # make sure ipython loads the right instance, ie if in virtual env or not
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
 
@@ -78,5 +81,4 @@ fi
 eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
-
 
