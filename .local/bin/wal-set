@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# export colors to alacritty
+# sh ~/colorscript.sh & 
+
+# export colors to cava 
+# sh ~/cavascript.sh & 
+
+# update betterlockscreen
+betterlockscreen -u $(cat ~/.cache/wal/wal)
+
+# restart the dunst daemon
+killall dunst && dunst &!
