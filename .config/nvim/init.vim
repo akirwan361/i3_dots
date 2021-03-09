@@ -8,6 +8,9 @@ set runtimepath^=$HOME/.config/nvim/autoload
 set runtimepath^=$HOME/.config/nvim/plugged
 " set runtimepath^=$HOME/.config/nvim/shada
 
+syntax on
+syntax enable 
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'junegunn/vim-plug' 
@@ -35,7 +38,6 @@ let g:deoplete#enable_at_startup = 1
 if has('python3')
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
-  Plug 'Valloric/YouCompleteMe'
 endif
 
 Plug 'ervandew/supertab'
@@ -45,6 +47,9 @@ Plug 'davidhalter/jedi-vim'
 " add the pywal plugin 
 Plug 'dylanaraps/wal.vim'
 " colorscheme wal 
+
+" Use limelight
+" Plug 'junegunn/limelight.vim'
 
 call plug#end()
 
@@ -67,4 +72,18 @@ let g:vimtex_view_method = 'zathura'
 
 let g:python3_host_prog = '/usr/bin/python'
 
+let g:tex_flavor='latex'
+
+set spell spelllang=en
+" if !exists('g:ycm_semantic_triggers')
+"    let g:ycm_semantic_triggers = {}
+" endif
+
+" au VimEnter * let g:ycm_semantic_triggers.tex=g:vimtex#re#youcompleteme
 colorscheme wal
+
+""" Custom mappings
+
+noremap <silent> <Down> gj
+noremap <silent> <Up> gk
+set number

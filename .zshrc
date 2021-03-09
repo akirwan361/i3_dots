@@ -52,13 +52,13 @@ alias guct="$HOME/GUCT/GuideCamTool-linux-2.1.0/bin/GuideCamTool"
 alias qfits="$HOME/QFitsView/QFitsView_4.0"			
 alias ds9="/usr/bin/ds9"
 alias ciao="source $HOME/ciao_env/ciao-4.12/bin/ciao.bash"
+
 # we'll need to sort out the virtual envs sometime...
 # telassar python venv
-alias telassar="source $HOME/Documents/telassar/env/bin/activate"
+alias telassar="pyenv activate vtel"
 alias suspend="systemctl suspend"
-# pyreduc python venv
-#alias pyred="source $HOME/Docoments/pyreduc/pyreduce/bin/activate"
-#alias signal-cli="$HOME/signal-cli/build/install/signal-cli/bin/signal-cli"
+alias spotify="systemctl --user restart spotifyd.service && spt"
+
 alias siggo="$HOME/siggo/bin/siggo"
 # make sure ipython loads the right instance, ie if in virtual env or not
 alias ipy="python -c 'import IPython; IPython.terminal.ipapp.launch_new_instance()'"
@@ -81,4 +81,18 @@ fi
 eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
+
+function pdfpextr()
+{
+    # this function uses 3 arguments:
+    #     $1 is the first page of the range to extract
+    #     $2 is the last page of the range to extract
+    #     $3 is the input file
+    #     output file will be named "inputfile_pXX-pYY.pdf"
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER \
+       -dFirstPage=${1} \
+       -dLastPage=${2} \
+       -sOutputFile=${3%.pdf}_p${1}-p${2}.pdf \
+       ${3}
+}
 
