@@ -105,7 +105,7 @@ label-mode-foreground 		= ${colors.foreground-alt}
 label-focused 			= 
 label-focused-font 		= 3 
 label-focused-foreground 	= ${colors.foreground-alt}
-label-focused-background 	=
+;label-focused-background 	=
 label-focused-padding 		= 1
 
 ; visible = active workspace on any unfocused monitor

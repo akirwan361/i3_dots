@@ -4,7 +4,7 @@
 # Polybar Pulseaudio Control                                     #
 # https://github.com/marioortizmanero/polybar-pulseaudio-control #
 ##################################################################
-source $HOME/.Xresources
+source $HOME/.cache/wal/colors.sh
 
 # Script configuration (more info in the README)
 OSD="no"  # On Screen Display message for KDE if enabled
@@ -13,7 +13,10 @@ MAX_VOL=100  # Maximum volume
 AUTOSYNC="no"  # All programs have the same volume if enabled
 VOLUME_ICONS=() #(" " " " " ") # Volume icons array, from lower volume to higher
 MUTED_ICON=""  # Muted volume icon
-MUTED_COLOR="%{F#8f6a67}" #"%{F#6b6b6b}"  # Color when the audio is muted
+MUTED_COLOR="%{F$color5}"  
+
+#  "%{F#8f6a67}" #"%{F#6b6b6b}"  # Color when the audio is muted
+
 NOTIFICATIONS="yes"  # Notifications when switching sinks if enabled
 SINK_ICON="" #" " # Icon always shown to the left of the default sink names
 
