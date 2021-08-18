@@ -2,13 +2,16 @@
 # export PATH=$HOME/bin:/usr/local/bin:"${PATH}:${HOME}/.local/bin/":$PATH
 SIGPATH="$HOME/signal-cli/build/install/signal-cli/bin"
 export PATH=/usr/local/ssbin:/usr/local/bin:$HOME/bin:/usr/bin:$HOME/.local/bin:$SIGPATH:$HOME/.cargo/bin 
-# add signal cli?
-# export PATH=$HOME/signal-cli/build/install/signal-cli/bin
 
+export XUVTOP=$HOME/chianti/dbase
+
+# for pgplot
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/pgplot
 # make sure pyenv is in your $PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+# For the `telassar` development:
 # we want neovim as our editor
 export VISUAL=nvim
 export EDITOR="$VISUAL"
@@ -55,7 +58,7 @@ alias ciao="source $HOME/ciao_env/ciao-4.12/bin/ciao.bash"
 
 # we'll need to sort out the virtual envs sometime...
 # telassar python venv
-alias telassar="pyenv activate vtel"
+alias vtel="pyenv activate vtel"
 alias suspend="systemctl suspend"
 alias spotify="systemctl --user restart spotifyd.service && spt"
 
@@ -96,3 +99,10 @@ function pdfpextr()
        ${3}
 }
 
+function wiki()
+{
+  # this function takes on argument as a search term and
+  # gives it to the Arch Wiki 
+  # the results are printed in terminal via lynx
+  lynx https://wiki.archlinux.org/index.php\?search\=${1}
+}

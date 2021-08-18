@@ -23,6 +23,7 @@ font xft:Fira Code Retina 9
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#--nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -49,14 +50,33 @@ bindsym XF86AudioLowerVolume exec changeVolume -2%
 # brightness keys
 # increase
 #bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'brightness up'"
-bindsym XF86MonBrightnessUp exec changeBrightness incr 
-bindsym XF86MonBrightnessDown exec changeBrightness decr
+bindsym XF86MonBrightnessUp exec --no-startup-id changeBrightness incr 
+bindsym XF86MonBrightnessDown exec --no-startup-id changeBrightness decr
 
 # decrease
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
 
 # Set a suspend key?
 bindsym Ctrl+shift+s exec systemctl suspend
+
+set $Locker light-locker && sleep 1
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker --no-late-locking, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker --lock-on-suspend && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker --lock-on-suspend && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+x mode "$mode_system"
+
 
 # screenshot
 bindsym Print exec scrot $HOME/Pictures/'Screenshot+%Y-%m-%d_%H:%M:%S'.png
@@ -84,6 +104,7 @@ bindsym $mod+p exec --no-startup-id rofi -show window -display-window "Windows" 
 	-window-format "{w} {n} {r}"
 # bar toggle, hide or show
 # bindsym $mod+m bar mode toggle
+bindsym $mod+b exec --no-startup-id rofi-bluetooth
 
 # set the gaps
 gaps inner 13
@@ -214,6 +235,26 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+mode "moveit" {
+	# these bindings trigger as soon as you enter the moveit mode
+	# pressing left will move the floating window to the left
+	# pressing right will move the floating window to the right
+	# pressing down will move the floating window down
+	# pressing up will move the floating window up
+	
+	bindsym Up move up 20 px 
+	bindsym Left move left 20 px
+	bindsym Right move right 20 px
+	bindsym Down move down 20 px
+
+	# back to normal: Enter, Escape, or $mod+m
+	bindsym $mod+m mode "default"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+
+}
+
+bindsym $mod+m focus floating; mode "moveit"
 # get rid of the hideous borders
 default_border none
 default_floating_border none
@@ -221,13 +262,13 @@ hide_edge_borders both
 
 # let's try to set the betterlockscreen
 # set desktop background with custom effect
-exec --no-startup-id betterlockscreen -u $(cat ~/.cache/wal/wal)
+# exec --no-startup-id betterlockscreen -u $(cat ~/.cache/wal/wal)
 
 # keybind it
-bindsym $mod+Shift+x exec betterlockscreen -l blur 
+# bindsym $mod+Shift+x exec betterlockscreen -l blur 
 
 # assign some programs to certain workspaces?
-assign [class="firefox"] $ws1 
+# assign [class="firefox"] $ws1 
 # for_window [class="^vlc"] move to workspace $ws3; workspace $ws3
 assign [class="Zathura"] $ws2
 #for_window [title="^ranger"] move to workspace $ws4
