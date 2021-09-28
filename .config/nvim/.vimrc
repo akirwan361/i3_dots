@@ -6,14 +6,10 @@ set nocompatible
 set runtimepath^=$HOME/.config/nvim
 set runtimepath^=$HOME/.config/nvim/autoload
 set runtimepath^=$HOME/.config/nvim/plugged
-" set runtimepath^=$HOME/.config/nvim/shada
 
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'junegunn/vim-plug' 
-
-" shorthand notations: fetches https://github.com/junegunn/vim-easy-align
-" Plug 'junegunn/vim-easy-align'
 
 " on-demand loading
 Plug 'scrooloose/nerdtree'
@@ -29,13 +25,13 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
 let g:deoplete#enable_at_startup = 1
 
 " if has('python') || has('python3')
 if has('python3')
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
-  Plug 'Valloric/YouCompleteMe'
 endif
 
 Plug 'ervandew/supertab'
@@ -52,6 +48,8 @@ filetype plugin indent on
 call deoplete#custom#var('omni', 'input_patterns', {
       \ 'tex': g:vimtex#re#deoplete
       \})
+
+" let g:SuperTabDefaultCompletionType = '<C-n>'
 
 let g:UltiSnipsExpandTrigger='<tab>'
 
