@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 
 # export colors to alacritty
-# sh ~/colorscript.sh & 
+sh ~/colorscript.sh & 
 
 # export colors to cava 
 # sh ~/cavascript.sh & 
 
 # update betterlockscreen
 betterlockscreen -u $(cat ~/.cache/wal/wal)
+
+# we should try to run genzathurarc
+# exec ~/genzathura/install.sh &
+sh ~/genzathura/genzathurarc  >> "${HOME}/.config/zathura/zathurarc"
 
 # restart the dunst daemon
 killall dunst && dunst &!
