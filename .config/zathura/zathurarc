@@ -1,68 +1,3151 @@
-# barebones config 
-
-# open fit-width mode by default
-set adjust-open "best-fit"
-
-# one page per row
-set pages-per-row 1
-
-set scroll-page-aware "true"
-set scroll-full-overlap 0.01
-set scroll-step 100
-
-set zoom-min 10
-set guioptions ""
-
-# zathurarc-dark
-
-set font "inconsolata 15"
-set default-bg rbga(0,0,0,0.8)
-# set default-bg "#2a2426"
-set default-fg "#decabe"
-
-set statusbar-fg "#935236"
-set statusbar-bg "#8df02a"
-
-set inputbar-bg "#151515"
-set inputbar-fg "#FFFFFF"
-
-set inputbar-bg "#151515" #00 currently not used
-set inputbar-fg "#FFFFFF" #02
-
-set notification-error-bg "#8d402a" #08
-set notification-error-fg "#141312" #00
-
-set notification-warning-bg "#8d492a" #08
-set notification-warning-fg "#935236" #00
-
-set highlight-color "#F4BF75" #0A
-set highlight-active-color "#6A9FB5" #0D
-
-set completion-highlight-fg "#151515" #02
-set completion-highlight-bg "#90A959" #0C
-
-set completion-bg "#303030" #02
-set completion-fg "#E0E0E0" #0C
-
-set notification-bg "#90A959" #0B
-set notification-fg "#151515" #00
-
 set recolor "true"
-#set recolor-lightcolor "#000000" #00
-set recolor-lightcolor rgba(0,0,0,0.7)
-#set recolor-lightcolor "#1a1729" #00
-set recolor-darkcolor "#E0E0E0" #06
-set recolor-reverse-video "true"
-set recolor-keephue "false"
+set adjust-open "best-fit"
+set completion-bg "#0c0803"
+set completion-fg "#f0e2c6"
+set completion-group-bg "#0c0803"
+set completion-group-fg "#93704B"
+set completion-highlight-bg "#f0e2c6"
+set completion-highlight-fg "#0c0803"
 
-# maybe this will fix the dual page layout
-set first-page-column "1"
-set render-loading "false"
-set scroll-step 50
+set recolor-lightcolor "#0c0803"
+set recolor-darkcolor "#f0e2c6"
+set default-bg "#0c0803"
+
+set inputbar-bg "#0c0803"
+set inputbar-fg "#f0e2c6"
+set notification-bg "#0c0803"
+set notification-fg "#f0e2c6"
+set notification-error-bg "#975F28"
+set notification-error-fg "#f0e2c6"
+set notification-warning-bg "#975F28"
+set notification-warning-fg "#f0e2c6"
+set statusbar-bg "#0c0803"
+set statusbar-fg "#f0e2c6"
+set index-bg "#0c0803"
+set index-fg "#f0e2c6"
+set index-active-bg "#f0e2c6"
+set index-active-fg "#0c0803"
+set render-loading-bg "#0c0803"
+set render-loading-fg "#f0e2c6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
 
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#10100c"
+set completion-fg "#c7c2a3"
+set completion-group-bg "#10100c"
+set completion-group-fg "#716A48"
+set completion-highlight-bg "#c7c2a3"
+set completion-highlight-fg "#10100c"
+
+set recolor-lightcolor "#10100c"
+set recolor-darkcolor "#c7c2a3"
+set default-bg "#10100c"
+
+set inputbar-bg "#10100c"
+set inputbar-fg "#c7c2a3"
+set notification-bg "#10100c"
+set notification-fg "#c7c2a3"
+set notification-error-bg "#6D6E31"
+set notification-error-fg "#c7c2a3"
+set notification-warning-bg "#6D6E31"
+set notification-warning-fg "#c7c2a3"
+set statusbar-bg "#10100c"
+set statusbar-fg "#c7c2a3"
+set index-bg "#10100c"
+set index-fg "#c7c2a3"
+set index-active-bg "#c7c2a3"
+set index-active-fg "#10100c"
+set render-loading-bg "#10100c"
+set render-loading-fg "#c7c2a3"
+
+set window-title-home-tilde true
+set statusbar-basename true
 set selection-clipboard clipboard
 
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
 
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#10100c"
+set completion-fg "#c7c2a3"
+set completion-group-bg "#10100c"
+set completion-group-fg "#716A48"
+set completion-highlight-bg "#c7c2a3"
+set completion-highlight-fg "#10100c"
+
+set recolor-lightcolor "#10100c"
+set recolor-darkcolor "#c7c2a3"
+set default-bg "#10100c"
+
+set inputbar-bg "#10100c"
+set inputbar-fg "#c7c2a3"
+set notification-bg "#10100c"
+set notification-fg "#c7c2a3"
+set notification-error-bg "#6D6E31"
+set notification-error-fg "#c7c2a3"
+set notification-warning-bg "#6D6E31"
+set notification-warning-fg "#c7c2a3"
+set statusbar-bg "#10100c"
+set statusbar-fg "#c7c2a3"
+set index-bg "#10100c"
+set index-fg "#c7c2a3"
+set index-active-bg "#c7c2a3"
+set index-active-fg "#10100c"
+set render-loading-bg "#10100c"
+set render-loading-fg "#c7c2a3"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#090806"
+set completion-fg "#e0e3e6"
+set completion-group-bg "#090806"
+set completion-group-fg "#6D625C"
+set completion-highlight-bg "#e0e3e6"
+set completion-highlight-fg "#090806"
+
+set recolor-lightcolor "#090806"
+set recolor-darkcolor "#e0e3e6"
+set default-bg "#090806"
+
+set inputbar-bg "#090806"
+set inputbar-fg "#e0e3e6"
+set notification-bg "#090806"
+set notification-fg "#e0e3e6"
+set notification-error-bg "#564D48"
+set notification-error-fg "#e0e3e6"
+set notification-warning-bg "#564D48"
+set notification-warning-fg "#e0e3e6"
+set statusbar-bg "#090806"
+set statusbar-fg "#e0e3e6"
+set index-bg "#090806"
+set index-fg "#e0e3e6"
+set index-active-bg "#e0e3e6"
+set index-active-fg "#090806"
+set render-loading-bg "#090806"
+set render-loading-fg "#e0e3e6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#1e1c12"
+set completion-fg "#dadbe0"
+set completion-group-bg "#1e1c12"
+set completion-group-fg "#918871"
+set completion-highlight-bg "#dadbe0"
+set completion-highlight-fg "#1e1c12"
+
+set recolor-lightcolor "#1e1c12"
+set recolor-darkcolor "#dadbe0"
+set default-bg "#1e1c12"
+
+set inputbar-bg "#1e1c12"
+set inputbar-fg "#dadbe0"
+set notification-bg "#1e1c12"
+set notification-fg "#dadbe0"
+set notification-error-bg "#7E8079"
+set notification-error-fg "#dadbe0"
+set notification-warning-bg "#7E8079"
+set notification-warning-fg "#dadbe0"
+set statusbar-bg "#1e1c12"
+set statusbar-fg "#dadbe0"
+set index-bg "#1e1c12"
+set index-fg "#dadbe0"
+set index-active-bg "#dadbe0"
+set index-active-fg "#1e1c12"
+set render-loading-bg "#1e1c12"
+set render-loading-fg "#dadbe0"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#032760"
+set completion-fg "#e3ebf5"
+set completion-group-bg "#032760"
+set completion-group-fg "#90B5F3"
+set completion-highlight-bg "#e3ebf5"
+set completion-highlight-fg "#032760"
+
+set recolor-lightcolor "#032760"
+set recolor-darkcolor "#e3ebf5"
+set default-bg "#032760"
+
+set inputbar-bg "#032760"
+set inputbar-fg "#e3ebf5"
+set notification-bg "#032760"
+set notification-fg "#e3ebf5"
+set notification-error-bg "#5F97EE"
+set notification-error-fg "#e3ebf5"
+set notification-warning-bg "#5F97EE"
+set notification-warning-fg "#e3ebf5"
+set statusbar-bg "#032760"
+set statusbar-fg "#e3ebf5"
+set index-bg "#032760"
+set index-fg "#e3ebf5"
+set index-active-bg "#e3ebf5"
+set index-active-fg "#032760"
+set render-loading-bg "#032760"
+set render-loading-fg "#e3ebf5"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#100a08"
+set completion-fg "#d9c4ad"
+set completion-group-bg "#100a08"
+set completion-group-fg "#375063"
+set completion-highlight-bg "#d9c4ad"
+set completion-highlight-fg "#100a08"
+
+set recolor-lightcolor "#100a08"
+set recolor-darkcolor "#d9c4ad"
+set default-bg "#100a08"
+
+set inputbar-bg "#100a08"
+set inputbar-fg "#d9c4ad"
+set notification-bg "#100a08"
+set notification-fg "#d9c4ad"
+set notification-error-bg "#334755"
+set notification-error-fg "#d9c4ad"
+set notification-warning-bg "#334755"
+set notification-warning-fg "#d9c4ad"
+set statusbar-bg "#100a08"
+set statusbar-fg "#d9c4ad"
+set index-bg "#100a08"
+set index-fg "#d9c4ad"
+set index-active-bg "#d9c4ad"
+set index-active-fg "#100a08"
+set render-loading-bg "#100a08"
+set render-loading-fg "#d9c4ad"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#010101"
+set completion-fg "#ddd3cf"
+set completion-group-bg "#010101"
+set completion-group-fg "#DC5F1B"
+set completion-highlight-bg "#ddd3cf"
+set completion-highlight-fg "#010101"
+
+set recolor-lightcolor "#010101"
+set recolor-darkcolor "#ddd3cf"
+set default-bg "#010101"
+
+set inputbar-bg "#010101"
+set inputbar-fg "#ddd3cf"
+set notification-bg "#010101"
+set notification-fg "#ddd3cf"
+set notification-error-bg "#9C330D"
+set notification-error-fg "#ddd3cf"
+set notification-warning-bg "#9C330D"
+set notification-warning-fg "#ddd3cf"
+set statusbar-bg "#010101"
+set statusbar-fg "#ddd3cf"
+set index-bg "#010101"
+set index-fg "#ddd3cf"
+set index-active-bg "#ddd3cf"
+set index-active-fg "#010101"
+set render-loading-bg "#010101"
+set render-loading-fg "#ddd3cf"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#251e13"
+set completion-fg "#ede9e3"
+set completion-group-bg "#251e13"
+set completion-group-fg "#BCC5AF"
+set completion-highlight-bg "#ede9e3"
+set completion-highlight-fg "#251e13"
+
+set recolor-lightcolor "#251e13"
+set recolor-darkcolor "#ede9e3"
+set default-bg "#251e13"
+
+set inputbar-bg "#251e13"
+set inputbar-fg "#ede9e3"
+set notification-bg "#251e13"
+set notification-fg "#ede9e3"
+set notification-error-bg "#C9BBAA"
+set notification-error-fg "#ede9e3"
+set notification-warning-bg "#C9BBAA"
+set notification-warning-fg "#ede9e3"
+set statusbar-bg "#251e13"
+set statusbar-fg "#ede9e3"
+set index-bg "#251e13"
+set index-fg "#ede9e3"
+set index-active-bg "#ede9e3"
+set index-active-fg "#251e13"
+set render-loading-bg "#251e13"
+set render-loading-fg "#ede9e3"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0b11"
+set completion-fg "#ced1c3"
+set completion-group-bg "#0a0b11"
+set completion-group-fg "#8B795D"
+set completion-highlight-bg "#ced1c3"
+set completion-highlight-fg "#0a0b11"
+
+set recolor-lightcolor "#0a0b11"
+set recolor-darkcolor "#ced1c3"
+set default-bg "#0a0b11"
+
+set inputbar-bg "#0a0b11"
+set inputbar-fg "#ced1c3"
+set notification-bg "#0a0b11"
+set notification-fg "#ced1c3"
+set notification-error-bg "#505C5D"
+set notification-error-fg "#ced1c3"
+set notification-warning-bg "#505C5D"
+set notification-warning-fg "#ced1c3"
+set statusbar-bg "#0a0b11"
+set statusbar-fg "#ced1c3"
+set index-bg "#0a0b11"
+set index-fg "#ced1c3"
+set index-active-bg "#ced1c3"
+set index-active-fg "#0a0b11"
+set render-loading-bg "#0a0b11"
+set render-loading-fg "#ced1c3"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0c0604"
+set completion-fg "#d9d1c6"
+set completion-group-bg "#0c0604"
+set completion-group-fg "#A0502A"
+set completion-highlight-bg "#d9d1c6"
+set completion-highlight-fg "#0c0604"
+
+set recolor-lightcolor "#0c0604"
+set recolor-darkcolor "#d9d1c6"
+set default-bg "#0c0604"
+
+set inputbar-bg "#0c0604"
+set inputbar-fg "#d9d1c6"
+set notification-bg "#0c0604"
+set notification-fg "#d9d1c6"
+set notification-error-bg "#973213"
+set notification-error-fg "#d9d1c6"
+set notification-warning-bg "#973213"
+set notification-warning-fg "#d9d1c6"
+set statusbar-bg "#0c0604"
+set statusbar-fg "#d9d1c6"
+set index-bg "#0c0604"
+set index-fg "#d9d1c6"
+set index-active-bg "#d9d1c6"
+set index-active-fg "#0c0604"
+set render-loading-bg "#0c0604"
+set render-loading-fg "#d9d1c6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0c0604"
+set completion-fg "#d9d1c6"
+set completion-group-bg "#0c0604"
+set completion-group-fg "#A0502A"
+set completion-highlight-bg "#d9d1c6"
+set completion-highlight-fg "#0c0604"
+
+set recolor-lightcolor "#0c0604"
+set recolor-darkcolor "#d9d1c6"
+set default-bg "#0c0604"
+
+set inputbar-bg "#0c0604"
+set inputbar-fg "#d9d1c6"
+set notification-bg "#0c0604"
+set notification-fg "#d9d1c6"
+set notification-error-bg "#973213"
+set notification-error-fg "#d9d1c6"
+set notification-warning-bg "#973213"
+set notification-warning-fg "#d9d1c6"
+set statusbar-bg "#0c0604"
+set statusbar-fg "#d9d1c6"
+set index-bg "#0c0604"
+set index-fg "#d9d1c6"
+set index-active-bg "#d9d1c6"
+set index-active-fg "#0c0604"
+set render-loading-bg "#0c0604"
+set render-loading-fg "#d9d1c6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0c0604"
+set completion-fg "#d9d1c6"
+set completion-group-bg "#0c0604"
+set completion-group-fg "#A0502A"
+set completion-highlight-bg "#d9d1c6"
+set completion-highlight-fg "#0c0604"
+
+set recolor-lightcolor "#0c0604"
+set recolor-darkcolor "#d9d1c6"
+set default-bg "#0c0604"
+
+set inputbar-bg "#0c0604"
+set inputbar-fg "#d9d1c6"
+set notification-bg "#0c0604"
+set notification-fg "#d9d1c6"
+set notification-error-bg "#973213"
+set notification-error-fg "#d9d1c6"
+set notification-warning-bg "#973213"
+set notification-warning-fg "#d9d1c6"
+set statusbar-bg "#0c0604"
+set statusbar-fg "#d9d1c6"
+set index-bg "#0c0604"
+set index-fg "#d9d1c6"
+set index-active-bg "#d9d1c6"
+set index-active-fg "#0c0604"
+set render-loading-bg "#0c0604"
+set render-loading-fg "#d9d1c6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0b11"
+set completion-fg "#ced1c3"
+set completion-group-bg "#0a0b11"
+set completion-group-fg "#8B795D"
+set completion-highlight-bg "#ced1c3"
+set completion-highlight-fg "#0a0b11"
+
+set recolor-lightcolor "#0a0b11"
+set recolor-darkcolor "#ced1c3"
+set default-bg "#0a0b11"
+
+set inputbar-bg "#0a0b11"
+set inputbar-fg "#ced1c3"
+set notification-bg "#0a0b11"
+set notification-fg "#ced1c3"
+set notification-error-bg "#505C5D"
+set notification-error-fg "#ced1c3"
+set notification-warning-bg "#505C5D"
+set notification-warning-fg "#ced1c3"
+set statusbar-bg "#0a0b11"
+set statusbar-fg "#ced1c3"
+set index-bg "#0a0b11"
+set index-fg "#ced1c3"
+set index-active-bg "#ced1c3"
+set index-active-fg "#0a0b11"
+set render-loading-bg "#0a0b11"
+set render-loading-fg "#ced1c3"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#37251b"
+set completion-fg "#c2d4e5"
+set completion-group-bg "#37251b"
+set completion-group-fg "#7BA2C8"
+set completion-highlight-bg "#c2d4e5"
+set completion-highlight-fg "#37251b"
+
+set recolor-lightcolor "#37251b"
+set recolor-darkcolor "#c2d4e5"
+set default-bg "#37251b"
+
+set inputbar-bg "#37251b"
+set inputbar-fg "#c2d4e5"
+set notification-bg "#37251b"
+set notification-fg "#c2d4e5"
+set notification-error-bg "#748CAB"
+set notification-error-fg "#c2d4e5"
+set notification-warning-bg "#748CAB"
+set notification-warning-fg "#c2d4e5"
+set statusbar-bg "#37251b"
+set statusbar-fg "#c2d4e5"
+set index-bg "#37251b"
+set index-fg "#c2d4e5"
+set index-active-bg "#c2d4e5"
+set index-active-fg "#37251b"
+set render-loading-bg "#37251b"
+set render-loading-fg "#c2d4e5"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0e120d"
+set completion-fg "#aeb0bc"
+set completion-group-bg "#0e120d"
+set completion-group-fg "#39455D"
+set completion-highlight-bg "#aeb0bc"
+set completion-highlight-fg "#0e120d"
+
+set recolor-lightcolor "#0e120d"
+set recolor-darkcolor "#aeb0bc"
+set default-bg "#0e120d"
+
+set inputbar-bg "#0e120d"
+set inputbar-fg "#aeb0bc"
+set notification-bg "#0e120d"
+set notification-fg "#aeb0bc"
+set notification-error-bg "#2F384A"
+set notification-error-fg "#aeb0bc"
+set notification-warning-bg "#2F384A"
+set notification-warning-fg "#aeb0bc"
+set statusbar-bg "#0e120d"
+set statusbar-fg "#aeb0bc"
+set index-bg "#0e120d"
+set index-fg "#aeb0bc"
+set index-active-bg "#aeb0bc"
+set index-active-fg "#0e120d"
+set render-loading-bg "#0e120d"
+set render-loading-fg "#aeb0bc"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0e120d"
+set completion-fg "#aeb0bc"
+set completion-group-bg "#0e120d"
+set completion-group-fg "#39455D"
+set completion-highlight-bg "#aeb0bc"
+set completion-highlight-fg "#0e120d"
+
+set recolor-lightcolor "#0e120d"
+set recolor-darkcolor "#aeb0bc"
+set default-bg "#0e120d"
+
+set inputbar-bg "#0e120d"
+set inputbar-fg "#aeb0bc"
+set notification-bg "#0e120d"
+set notification-fg "#aeb0bc"
+set notification-error-bg "#2F384A"
+set notification-error-fg "#aeb0bc"
+set notification-warning-bg "#2F384A"
+set notification-warning-fg "#aeb0bc"
+set statusbar-bg "#0e120d"
+set statusbar-fg "#aeb0bc"
+set index-bg "#0e120d"
+set index-fg "#aeb0bc"
+set index-active-bg "#aeb0bc"
+set index-active-fg "#0e120d"
+set render-loading-bg "#0e120d"
+set render-loading-fg "#aeb0bc"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0e120d"
+set completion-fg "#aeb0bc"
+set completion-group-bg "#0e120d"
+set completion-group-fg "#39455D"
+set completion-highlight-bg "#aeb0bc"
+set completion-highlight-fg "#0e120d"
+
+set recolor-lightcolor "#0e120d"
+set recolor-darkcolor "#aeb0bc"
+set default-bg "#0e120d"
+
+set inputbar-bg "#0e120d"
+set inputbar-fg "#aeb0bc"
+set notification-bg "#0e120d"
+set notification-fg "#aeb0bc"
+set notification-error-bg "#2F384A"
+set notification-error-fg "#aeb0bc"
+set notification-warning-bg "#2F384A"
+set notification-warning-fg "#aeb0bc"
+set statusbar-bg "#0e120d"
+set statusbar-fg "#aeb0bc"
+set index-bg "#0e120d"
+set index-fg "#aeb0bc"
+set index-active-bg "#aeb0bc"
+set index-active-fg "#0e120d"
+set render-loading-bg "#0e120d"
+set render-loading-fg "#aeb0bc"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f0f0d"
+set completion-fg "#efdbcd"
+set completion-group-bg "#0f0f0d"
+set completion-group-fg "#A08B76"
+set completion-highlight-bg "#efdbcd"
+set completion-highlight-fg "#0f0f0d"
+
+set recolor-lightcolor "#0f0f0d"
+set recolor-darkcolor "#efdbcd"
+set default-bg "#0f0f0d"
+
+set inputbar-bg "#0f0f0d"
+set inputbar-fg "#efdbcd"
+set notification-bg "#0f0f0d"
+set notification-fg "#efdbcd"
+set notification-error-bg "#946444"
+set notification-error-fg "#efdbcd"
+set notification-warning-bg "#946444"
+set notification-warning-fg "#efdbcd"
+set statusbar-bg "#0f0f0d"
+set statusbar-fg "#efdbcd"
+set index-bg "#0f0f0d"
+set index-fg "#efdbcd"
+set index-active-bg "#efdbcd"
+set index-active-fg "#0f0f0d"
+set render-loading-bg "#0f0f0d"
+set render-loading-fg "#efdbcd"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f0f0d"
+set completion-fg "#efdbcd"
+set completion-group-bg "#0f0f0d"
+set completion-group-fg "#A08B76"
+set completion-highlight-bg "#efdbcd"
+set completion-highlight-fg "#0f0f0d"
+
+set recolor-lightcolor "#0f0f0d"
+set recolor-darkcolor "#efdbcd"
+set default-bg "#0f0f0d"
+
+set inputbar-bg "#0f0f0d"
+set inputbar-fg "#efdbcd"
+set notification-bg "#0f0f0d"
+set notification-fg "#efdbcd"
+set notification-error-bg "#946444"
+set notification-error-fg "#efdbcd"
+set notification-warning-bg "#946444"
+set notification-warning-fg "#efdbcd"
+set statusbar-bg "#0f0f0d"
+set statusbar-fg "#efdbcd"
+set index-bg "#0f0f0d"
+set index-fg "#efdbcd"
+set index-active-bg "#efdbcd"
+set index-active-fg "#0f0f0d"
+set render-loading-bg "#0f0f0d"
+set render-loading-fg "#efdbcd"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f0f0d"
+set completion-fg "#efdbcd"
+set completion-group-bg "#0f0f0d"
+set completion-group-fg "#A08B76"
+set completion-highlight-bg "#efdbcd"
+set completion-highlight-fg "#0f0f0d"
+
+set recolor-lightcolor "#0f0f0d"
+set recolor-darkcolor "#efdbcd"
+set default-bg "#0f0f0d"
+
+set inputbar-bg "#0f0f0d"
+set inputbar-fg "#efdbcd"
+set notification-bg "#0f0f0d"
+set notification-fg "#efdbcd"
+set notification-error-bg "#946444"
+set notification-error-fg "#efdbcd"
+set notification-warning-bg "#946444"
+set notification-warning-fg "#efdbcd"
+set statusbar-bg "#0f0f0d"
+set statusbar-fg "#efdbcd"
+set index-bg "#0f0f0d"
+set index-fg "#efdbcd"
+set index-active-bg "#efdbcd"
+set index-active-fg "#0f0f0d"
+set render-loading-bg "#0f0f0d"
+set render-loading-fg "#efdbcd"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f0f0d"
+set completion-fg "#efdbcd"
+set completion-group-bg "#0f0f0d"
+set completion-group-fg "#A08B76"
+set completion-highlight-bg "#efdbcd"
+set completion-highlight-fg "#0f0f0d"
+
+set recolor-lightcolor "#0f0f0d"
+set recolor-darkcolor "#efdbcd"
+set default-bg "#0f0f0d"
+
+set inputbar-bg "#0f0f0d"
+set inputbar-fg "#efdbcd"
+set notification-bg "#0f0f0d"
+set notification-fg "#efdbcd"
+set notification-error-bg "#946444"
+set notification-error-fg "#efdbcd"
+set notification-warning-bg "#946444"
+set notification-warning-fg "#efdbcd"
+set statusbar-bg "#0f0f0d"
+set statusbar-fg "#efdbcd"
+set index-bg "#0f0f0d"
+set index-fg "#efdbcd"
+set index-active-bg "#efdbcd"
+set index-active-fg "#0f0f0d"
+set render-loading-bg "#0f0f0d"
+set render-loading-fg "#efdbcd"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set first-page-column 1
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#000109"
+set completion-fg "#abc0ed"
+set completion-group-bg "#000109"
+set completion-group-fg "#062C9E"
+set completion-highlight-bg "#abc0ed"
+set completion-highlight-fg "#000109"
+
+set recolor-lightcolor "#000109"
+set recolor-darkcolor "#abc0ed"
+set default-bg "#000109"
+
+set inputbar-bg "#000109"
+set inputbar-fg "#abc0ed"
+set notification-bg "#000109"
+set notification-fg "#abc0ed"
+set notification-error-bg "#07308F"
+set notification-error-fg "#abc0ed"
+set notification-warning-bg "#07308F"
+set notification-warning-fg "#abc0ed"
+set statusbar-bg "#000109"
+set statusbar-fg "#abc0ed"
+set index-bg "#000109"
+set index-fg "#abc0ed"
+set index-active-bg "#abc0ed"
+set index-active-fg "#000109"
+set render-loading-bg "#000109"
+set render-loading-fg "#abc0ed"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f0f0d"
+set completion-fg "#efdbcd"
+set completion-group-bg "#0f0f0d"
+set completion-group-fg "#A08B76"
+set completion-highlight-bg "#efdbcd"
+set completion-highlight-fg "#0f0f0d"
+
+set recolor-lightcolor "#0f0f0d"
+set recolor-darkcolor "#efdbcd"
+set default-bg "#0f0f0d"
+
+set inputbar-bg "#0f0f0d"
+set inputbar-fg "#efdbcd"
+set notification-bg "#0f0f0d"
+set notification-fg "#efdbcd"
+set notification-error-bg "#946444"
+set notification-error-fg "#efdbcd"
+set notification-warning-bg "#946444"
+set notification-warning-fg "#efdbcd"
+set statusbar-bg "#0f0f0d"
+set statusbar-fg "#efdbcd"
+set index-bg "#0f0f0d"
+set index-fg "#efdbcd"
+set index-active-bg "#efdbcd"
+set index-active-fg "#0f0f0d"
+set render-loading-bg "#0f0f0d"
+set render-loading-fg "#efdbcd"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#100a08"
+set completion-fg "#d9c4ad"
+set completion-group-bg "#100a08"
+set completion-group-fg "#375063"
+set completion-highlight-bg "#d9c4ad"
+set completion-highlight-fg "#100a08"
+
+set recolor-lightcolor "#100a08"
+set recolor-darkcolor "#d9c4ad"
+set default-bg "#100a08"
+
+set inputbar-bg "#100a08"
+set inputbar-fg "#d9c4ad"
+set notification-bg "#100a08"
+set notification-fg "#d9c4ad"
+set notification-error-bg "#334755"
+set notification-error-fg "#d9c4ad"
+set notification-warning-bg "#334755"
+set notification-warning-fg "#d9c4ad"
+set statusbar-bg "#100a08"
+set statusbar-fg "#d9c4ad"
+set index-bg "#100a08"
+set index-fg "#d9c4ad"
+set index-active-bg "#d9c4ad"
+set index-active-fg "#100a08"
+set render-loading-bg "#100a08"
+set render-loading-fg "#d9c4ad"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f1e22"
+set completion-fg "#e4e9e7"
+set completion-group-bg "#0f1e22"
+set completion-group-fg "#B9966A"
+set completion-highlight-bg "#e4e9e7"
+set completion-highlight-fg "#0f1e22"
+
+set recolor-lightcolor "#0f1e22"
+set recolor-darkcolor "#e4e9e7"
+set default-bg "#0f1e22"
+
+set inputbar-bg "#0f1e22"
+set inputbar-fg "#e4e9e7"
+set notification-bg "#0f1e22"
+set notification-fg "#e4e9e7"
+set notification-error-bg "#936E5F"
+set notification-error-fg "#e4e9e7"
+set notification-warning-bg "#936E5F"
+set notification-warning-fg "#e4e9e7"
+set statusbar-bg "#0f1e22"
+set statusbar-fg "#e4e9e7"
+set index-bg "#0f1e22"
+set index-fg "#e4e9e7"
+set index-active-bg "#e4e9e7"
+set index-active-fg "#0f1e22"
+set render-loading-bg "#0f1e22"
+set render-loading-fg "#e4e9e7"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#100a08"
+set completion-fg "#d9c4ad"
+set completion-group-bg "#100a08"
+set completion-group-fg "#375063"
+set completion-highlight-bg "#d9c4ad"
+set completion-highlight-fg "#100a08"
+
+set recolor-lightcolor "#100a08"
+set recolor-darkcolor "#d9c4ad"
+set default-bg "#100a08"
+
+set inputbar-bg "#100a08"
+set inputbar-fg "#d9c4ad"
+set notification-bg "#100a08"
+set notification-fg "#d9c4ad"
+set notification-error-bg "#334755"
+set notification-error-fg "#d9c4ad"
+set notification-warning-bg "#334755"
+set notification-warning-fg "#d9c4ad"
+set statusbar-bg "#100a08"
+set statusbar-fg "#d9c4ad"
+set index-bg "#100a08"
+set index-fg "#d9c4ad"
+set index-active-bg "#d9c4ad"
+set index-active-fg "#100a08"
+set render-loading-bg "#100a08"
+set render-loading-fg "#d9c4ad"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0b1011"
+set completion-fg "#afbbc0"
+set completion-group-bg "#0b1011"
+set completion-group-fg "#535E67"
+set completion-highlight-bg "#afbbc0"
+set completion-highlight-fg "#0b1011"
+
+set recolor-lightcolor "#0b1011"
+set recolor-darkcolor "#afbbc0"
+set default-bg "#0b1011"
+
+set inputbar-bg "#0b1011"
+set inputbar-fg "#afbbc0"
+set notification-bg "#0b1011"
+set notification-fg "#afbbc0"
+set notification-error-bg "#2F646A"
+set notification-error-fg "#afbbc0"
+set notification-warning-bg "#2F646A"
+set notification-warning-fg "#afbbc0"
+set statusbar-bg "#0b1011"
+set statusbar-fg "#afbbc0"
+set index-bg "#0b1011"
+set index-fg "#afbbc0"
+set index-active-bg "#afbbc0"
+set index-active-fg "#0b1011"
+set render-loading-bg "#0b1011"
+set render-loading-fg "#afbbc0"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#090806"
+set completion-fg "#e0e3e6"
+set completion-group-bg "#090806"
+set completion-group-fg "#6D625C"
+set completion-highlight-bg "#e0e3e6"
+set completion-highlight-fg "#090806"
+
+set recolor-lightcolor "#090806"
+set recolor-darkcolor "#e0e3e6"
+set default-bg "#090806"
+
+set inputbar-bg "#090806"
+set inputbar-fg "#e0e3e6"
+set notification-bg "#090806"
+set notification-fg "#e0e3e6"
+set notification-error-bg "#564D48"
+set notification-error-fg "#e0e3e6"
+set notification-warning-bg "#564D48"
+set notification-warning-fg "#e0e3e6"
+set statusbar-bg "#090806"
+set statusbar-fg "#e0e3e6"
+set index-bg "#090806"
+set index-fg "#e0e3e6"
+set index-active-bg "#e0e3e6"
+set index-active-fg "#090806"
+set render-loading-bg "#090806"
+set render-loading-fg "#e0e3e6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0B090A"
+set completion-fg "#b5b5ba"
+set completion-group-bg "#0B090A"
+set completion-group-fg "#3F3E44"
+set completion-highlight-bg "#b5b5ba"
+set completion-highlight-fg "#0B090A"
+
+set recolor-lightcolor "#0B090A"
+set recolor-darkcolor "#b5b5ba"
+set default-bg "#0B090A"
+
+set inputbar-bg "#0B090A"
+set inputbar-fg "#b5b5ba"
+set notification-bg "#0B090A"
+set notification-fg "#b5b5ba"
+set notification-error-bg "#5F4738"
+set notification-error-fg "#b5b5ba"
+set notification-warning-bg "#5F4738"
+set notification-warning-fg "#b5b5ba"
+set statusbar-bg "#0B090A"
+set statusbar-fg "#b5b5ba"
+set index-bg "#0B090A"
+set index-fg "#b5b5ba"
+set index-active-bg "#b5b5ba"
+set index-active-fg "#0B090A"
+set render-loading-bg "#0B090A"
+set render-loading-fg "#b5b5ba"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#080F10"
+set completion-fg "#e7b5b7"
+set completion-group-bg "#080F10"
+set completion-group-fg "#93463C"
+set completion-highlight-bg "#e7b5b7"
+set completion-highlight-fg "#080F10"
+
+set recolor-lightcolor "#080F10"
+set recolor-darkcolor "#e7b5b7"
+set default-bg "#080F10"
+
+set inputbar-bg "#080F10"
+set inputbar-fg "#e7b5b7"
+set notification-bg "#080F10"
+set notification-fg "#e7b5b7"
+set notification-error-bg "#863E38"
+set notification-error-fg "#e7b5b7"
+set notification-warning-bg "#863E38"
+set notification-warning-fg "#e7b5b7"
+set statusbar-bg "#080F10"
+set statusbar-fg "#e7b5b7"
+set index-bg "#080F10"
+set index-fg "#e7b5b7"
+set index-active-bg "#e7b5b7"
+set index-active-fg "#080F10"
+set render-loading-bg "#080F10"
+set render-loading-fg "#e7b5b7"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#160a11"
+set completion-fg "#8ec3d9"
+set completion-group-bg "#160a11"
+set completion-group-fg "#545C55"
+set completion-highlight-bg "#8ec3d9"
+set completion-highlight-fg "#160a11"
+
+set recolor-lightcolor "#160a11"
+set recolor-darkcolor "#8ec3d9"
+set default-bg "#160a11"
+
+set inputbar-bg "#160a11"
+set inputbar-fg "#8ec3d9"
+set notification-bg "#160a11"
+set notification-fg "#8ec3d9"
+set notification-error-bg "#1B5261"
+set notification-error-fg "#8ec3d9"
+set notification-warning-bg "#1B5261"
+set notification-warning-fg "#8ec3d9"
+set statusbar-bg "#160a11"
+set statusbar-fg "#8ec3d9"
+set index-bg "#160a11"
+set index-fg "#8ec3d9"
+set index-active-bg "#8ec3d9"
+set index-active-fg "#160a11"
+set render-loading-bg "#160a11"
+set render-loading-fg "#8ec3d9"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#160a11"
+set completion-fg "#8ec3d9"
+set completion-group-bg "#160a11"
+set completion-group-fg "#545C55"
+set completion-highlight-bg "#8ec3d9"
+set completion-highlight-fg "#160a11"
+
+set recolor-lightcolor "#160a11"
+set recolor-darkcolor "#8ec3d9"
+set default-bg "#160a11"
+
+set inputbar-bg "#160a11"
+set inputbar-fg "#8ec3d9"
+set notification-bg "#160a11"
+set notification-fg "#8ec3d9"
+set notification-error-bg "#1B5261"
+set notification-error-fg "#8ec3d9"
+set notification-warning-bg "#1B5261"
+set notification-warning-fg "#8ec3d9"
+set statusbar-bg "#160a11"
+set statusbar-fg "#8ec3d9"
+set index-bg "#160a11"
+set index-fg "#8ec3d9"
+set index-active-bg "#8ec3d9"
+set index-active-fg "#160a11"
+set render-loading-bg "#160a11"
+set render-loading-fg "#8ec3d9"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0b0907"
+set completion-fg "#97aebc"
+set completion-group-bg "#0b0907"
+set completion-group-fg "#1C3545"
+set completion-highlight-bg "#97aebc"
+set completion-highlight-fg "#0b0907"
+
+set recolor-lightcolor "#0b0907"
+set recolor-darkcolor "#97aebc"
+set default-bg "#0b0907"
+
+set inputbar-bg "#0b0907"
+set inputbar-fg "#97aebc"
+set notification-bg "#0b0907"
+set notification-fg "#97aebc"
+set notification-error-bg "#574637"
+set notification-error-fg "#97aebc"
+set notification-warning-bg "#574637"
+set notification-warning-fg "#97aebc"
+set statusbar-bg "#0b0907"
+set statusbar-fg "#97aebc"
+set index-bg "#0b0907"
+set index-fg "#97aebc"
+set index-active-bg "#97aebc"
+set index-active-fg "#0b0907"
+set render-loading-bg "#0b0907"
+set render-loading-fg "#97aebc"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0E0C0C"
+set completion-fg "#efcf9f"
+set completion-group-bg "#0E0C0C"
+set completion-group-fg "#664534"
+set completion-highlight-bg "#efcf9f"
+set completion-highlight-fg "#0E0C0C"
+
+set recolor-lightcolor "#0E0C0C"
+set recolor-darkcolor "#efcf9f"
+set default-bg "#0E0C0C"
+
+set inputbar-bg "#0E0C0C"
+set inputbar-fg "#efcf9f"
+set notification-bg "#0E0C0C"
+set notification-fg "#efcf9f"
+set notification-error-bg "#4A3830"
+set notification-error-fg "#efcf9f"
+set notification-warning-bg "#4A3830"
+set notification-warning-fg "#efcf9f"
+set statusbar-bg "#0E0C0C"
+set statusbar-fg "#efcf9f"
+set index-bg "#0E0C0C"
+set index-fg "#efcf9f"
+set index-active-bg "#efcf9f"
+set index-active-fg "#0E0C0C"
+set render-loading-bg "#0E0C0C"
+set render-loading-fg "#efcf9f"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0E0C0C"
+set completion-fg "#efcf9f"
+set completion-group-bg "#0E0C0C"
+set completion-group-fg "#664534"
+set completion-highlight-bg "#efcf9f"
+set completion-highlight-fg "#0E0C0C"
+
+set recolor-lightcolor "#0E0C0C"
+set recolor-darkcolor "#efcf9f"
+set default-bg "#0E0C0C"
+
+set inputbar-bg "#0E0C0C"
+set inputbar-fg "#efcf9f"
+set notification-bg "#0E0C0C"
+set notification-fg "#efcf9f"
+set notification-error-bg "#4A3830"
+set notification-error-fg "#efcf9f"
+set notification-warning-bg "#4A3830"
+set notification-warning-fg "#efcf9f"
+set statusbar-bg "#0E0C0C"
+set statusbar-fg "#efcf9f"
+set index-bg "#0E0C0C"
+set index-fg "#efcf9f"
+set index-active-bg "#efcf9f"
+set index-active-fg "#0E0C0C"
+set render-loading-bg "#0E0C0C"
+set render-loading-fg "#efcf9f"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0401"
+set completion-fg "#ece0c6"
+set completion-group-bg "#0a0401"
+set completion-group-fg "#8D734E"
+set completion-highlight-bg "#ece0c6"
+set completion-highlight-fg "#0a0401"
+
+set recolor-lightcolor "#0a0401"
+set recolor-darkcolor "#ece0c6"
+set default-bg "#0a0401"
+
+set inputbar-bg "#0a0401"
+set inputbar-fg "#ece0c6"
+set notification-bg "#0a0401"
+set notification-fg "#ece0c6"
+set notification-error-bg "#84673D"
+set notification-error-fg "#ece0c6"
+set notification-warning-bg "#84673D"
+set notification-warning-fg "#ece0c6"
+set statusbar-bg "#0a0401"
+set statusbar-fg "#ece0c6"
+set index-bg "#0a0401"
+set index-fg "#ece0c6"
+set index-active-bg "#ece0c6"
+set index-active-fg "#0a0401"
+set render-loading-bg "#0a0401"
+set render-loading-fg "#ece0c6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#160f0e"
+set completion-fg "#eed5a4"
+set completion-group-bg "#160f0e"
+set completion-group-fg "#6E4D4B"
+set completion-highlight-bg "#eed5a4"
+set completion-highlight-fg "#160f0e"
+
+set recolor-lightcolor "#160f0e"
+set recolor-darkcolor "#eed5a4"
+set default-bg "#160f0e"
+
+set inputbar-bg "#160f0e"
+set inputbar-fg "#eed5a4"
+set notification-bg "#160f0e"
+set notification-fg "#eed5a4"
+set notification-error-bg "#51444C"
+set notification-error-fg "#eed5a4"
+set notification-warning-bg "#51444C"
+set notification-warning-fg "#eed5a4"
+set statusbar-bg "#160f0e"
+set statusbar-fg "#eed5a4"
+set index-bg "#160f0e"
+set index-fg "#eed5a4"
+set index-active-bg "#eed5a4"
+set index-active-fg "#160f0e"
+set render-loading-bg "#160f0e"
+set render-loading-fg "#eed5a4"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#09090C"
+set completion-fg "#afbccd"
+set completion-group-bg "#09090C"
+set completion-group-fg "#274262"
+set completion-highlight-bg "#afbccd"
+set completion-highlight-fg "#09090C"
+
+set recolor-lightcolor "#09090C"
+set recolor-darkcolor "#afbccd"
+set default-bg "#09090C"
+
+set inputbar-bg "#09090C"
+set inputbar-fg "#afbccd"
+set notification-bg "#09090C"
+set notification-fg "#afbccd"
+set notification-error-bg "#233D63"
+set notification-error-fg "#afbccd"
+set notification-warning-bg "#233D63"
+set notification-warning-fg "#afbccd"
+set statusbar-bg "#09090C"
+set statusbar-fg "#afbccd"
+set index-bg "#09090C"
+set index-fg "#afbccd"
+set index-active-bg "#afbccd"
+set index-active-fg "#09090C"
+set render-loading-bg "#09090C"
+set render-loading-fg "#afbccd"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#000109"
+set completion-fg "#abc0ed"
+set completion-group-bg "#000109"
+set completion-group-fg "#062C9E"
+set completion-highlight-bg "#abc0ed"
+set completion-highlight-fg "#000109"
+
+set recolor-lightcolor "#000109"
+set recolor-darkcolor "#abc0ed"
+set default-bg "#000109"
+
+set inputbar-bg "#000109"
+set inputbar-fg "#abc0ed"
+set notification-bg "#000109"
+set notification-fg "#abc0ed"
+set notification-error-bg "#07308F"
+set notification-error-fg "#abc0ed"
+set notification-warning-bg "#07308F"
+set notification-warning-fg "#abc0ed"
+set statusbar-bg "#000109"
+set statusbar-fg "#abc0ed"
+set index-bg "#000109"
+set index-fg "#abc0ed"
+set index-active-bg "#abc0ed"
+set index-active-fg "#000109"
+set render-loading-bg "#000109"
+set render-loading-fg "#abc0ed"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#040B18"
+set completion-fg "#a7c4f2"
+set completion-group-bg "#040B18"
+set completion-group-fg "#1D63B8"
+set completion-highlight-bg "#a7c4f2"
+set completion-highlight-fg "#040B18"
+
+set recolor-lightcolor "#040B18"
+set recolor-darkcolor "#a7c4f2"
+set default-bg "#040B18"
+
+set inputbar-bg "#040B18"
+set inputbar-fg "#a7c4f2"
+set notification-bg "#040B18"
+set notification-fg "#a7c4f2"
+set notification-error-bg "#0455AC"
+set notification-error-fg "#a7c4f2"
+set notification-warning-bg "#0455AC"
+set notification-warning-fg "#a7c4f2"
+set statusbar-bg "#040B18"
+set statusbar-fg "#a7c4f2"
+set index-bg "#040B18"
+set index-fg "#a7c4f2"
+set index-active-bg "#a7c4f2"
+set index-active-fg "#040B18"
+set render-loading-bg "#040B18"
+set render-loading-fg "#a7c4f2"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0B090A"
+set completion-fg "#b5b5ba"
+set completion-group-bg "#0B090A"
+set completion-group-fg "#3F3E44"
+set completion-highlight-bg "#b5b5ba"
+set completion-highlight-fg "#0B090A"
+
+set recolor-lightcolor "#0B090A"
+set recolor-darkcolor "#b5b5ba"
+set default-bg "#0B090A"
+
+set inputbar-bg "#0B090A"
+set inputbar-fg "#b5b5ba"
+set notification-bg "#0B090A"
+set notification-fg "#b5b5ba"
+set notification-error-bg "#5F4738"
+set notification-error-fg "#b5b5ba"
+set notification-warning-bg "#5F4738"
+set notification-warning-fg "#b5b5ba"
+set statusbar-bg "#0B090A"
+set statusbar-fg "#b5b5ba"
+set index-bg "#0B090A"
+set index-fg "#b5b5ba"
+set index-active-bg "#b5b5ba"
+set index-active-fg "#0B090A"
+set render-loading-bg "#0B090A"
+set render-loading-fg "#b5b5ba"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0B090A"
+set completion-fg "#b5b5ba"
+set completion-group-bg "#0B090A"
+set completion-group-fg "#3F3E44"
+set completion-highlight-bg "#b5b5ba"
+set completion-highlight-fg "#0B090A"
+
+set recolor-lightcolor "#0B090A"
+set recolor-darkcolor "#b5b5ba"
+set default-bg "#0B090A"
+
+set inputbar-bg "#0B090A"
+set inputbar-fg "#b5b5ba"
+set notification-bg "#0B090A"
+set notification-fg "#b5b5ba"
+set notification-error-bg "#5F4738"
+set notification-error-fg "#b5b5ba"
+set notification-warning-bg "#5F4738"
+set notification-warning-fg "#b5b5ba"
+set statusbar-bg "#0B090A"
+set statusbar-fg "#b5b5ba"
+set index-bg "#0B090A"
+set index-fg "#b5b5ba"
+set index-active-bg "#b5b5ba"
+set index-active-fg "#0B090A"
+set render-loading-bg "#0B090A"
+set render-loading-fg "#b5b5ba"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0B0C16"
+set completion-fg "#ce9195"
+set completion-group-bg "#0B0C16"
+set completion-group-fg "#451D47"
+set completion-highlight-bg "#ce9195"
+set completion-highlight-fg "#0B0C16"
+
+set recolor-lightcolor "#0B0C16"
+set recolor-darkcolor "#ce9195"
+set default-bg "#0B0C16"
+
+set inputbar-bg "#0B0C16"
+set inputbar-fg "#ce9195"
+set notification-bg "#0B0C16"
+set notification-fg "#ce9195"
+set notification-error-bg "#3D215A"
+set notification-error-fg "#ce9195"
+set notification-warning-bg "#3D215A"
+set notification-warning-fg "#ce9195"
+set statusbar-bg "#0B0C16"
+set statusbar-fg "#ce9195"
+set index-bg "#0B0C16"
+set index-fg "#ce9195"
+set index-active-bg "#ce9195"
+set index-active-fg "#0B0C16"
+set render-loading-bg "#0B0C16"
+set render-loading-fg "#ce9195"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0B0C16"
+set completion-fg "#ce9195"
+set completion-group-bg "#0B0C16"
+set completion-group-fg "#451D47"
+set completion-highlight-bg "#ce9195"
+set completion-highlight-fg "#0B0C16"
+
+set recolor-lightcolor "#0B0C16"
+set recolor-darkcolor "#ce9195"
+set default-bg "#0B0C16"
+
+set inputbar-bg "#0B0C16"
+set inputbar-fg "#ce9195"
+set notification-bg "#0B0C16"
+set notification-fg "#ce9195"
+set notification-error-bg "#3D215A"
+set notification-error-fg "#ce9195"
+set notification-warning-bg "#3D215A"
+set notification-warning-fg "#ce9195"
+set statusbar-bg "#0B0C16"
+set statusbar-fg "#ce9195"
+set index-bg "#0B0C16"
+set index-fg "#ce9195"
+set index-active-bg "#ce9195"
+set index-active-fg "#0B0C16"
+set render-loading-bg "#0B0C16"
+set render-loading-fg "#ce9195"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#160f0e"
+set completion-fg "#eed5a4"
+set completion-group-bg "#160f0e"
+set completion-group-fg "#6E4D4B"
+set completion-highlight-bg "#eed5a4"
+set completion-highlight-fg "#160f0e"
+
+set recolor-lightcolor "#160f0e"
+set recolor-darkcolor "#eed5a4"
+set default-bg "#160f0e"
+
+set inputbar-bg "#160f0e"
+set inputbar-fg "#eed5a4"
+set notification-bg "#160f0e"
+set notification-fg "#eed5a4"
+set notification-error-bg "#51444C"
+set notification-error-fg "#eed5a4"
+set notification-warning-bg "#51444C"
+set notification-warning-fg "#eed5a4"
+set statusbar-bg "#160f0e"
+set statusbar-fg "#eed5a4"
+set index-bg "#160f0e"
+set index-fg "#eed5a4"
+set index-active-bg "#eed5a4"
+set index-active-fg "#160f0e"
+set render-loading-bg "#160f0e"
+set render-loading-fg "#eed5a4"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0903"
+set completion-fg "#c9cad1"
+set completion-group-bg "#0a0903"
+set completion-group-fg "#787A87"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#0a0903"
+
+set recolor-lightcolor "#0a0903"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#0a0903"
+
+set inputbar-bg "#0a0903"
+set inputbar-fg "#c9cad1"
+set notification-bg "#0a0903"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6E"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6E"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#0a0903"
+set statusbar-fg "#c9cad1"
+set index-bg "#0a0903"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#0a0903"
+set render-loading-bg "#0a0903"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0A0D16"
+set completion-fg "#ead0ac"
+set completion-group-bg "#0A0D16"
+set completion-group-fg "#974E24"
+set completion-highlight-bg "#ead0ac"
+set completion-highlight-fg "#0A0D16"
+
+set recolor-lightcolor "#0A0D16"
+set recolor-darkcolor "#ead0ac"
+set default-bg "#0A0D16"
+
+set inputbar-bg "#0A0D16"
+set inputbar-fg "#ead0ac"
+set notification-bg "#0A0D16"
+set notification-fg "#ead0ac"
+set notification-error-bg "#685548"
+set notification-error-fg "#ead0ac"
+set notification-warning-bg "#685548"
+set notification-warning-fg "#ead0ac"
+set statusbar-bg "#0A0D16"
+set statusbar-fg "#ead0ac"
+set index-bg "#0A0D16"
+set index-fg "#ead0ac"
+set index-active-bg "#ead0ac"
+set index-active-fg "#0A0D16"
+set render-loading-bg "#0A0D16"
+set render-loading-fg "#ead0ac"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0A0D16"
+set completion-fg "#ead0ac"
+set completion-group-bg "#0A0D16"
+set completion-group-fg "#974E24"
+set completion-highlight-bg "#ead0ac"
+set completion-highlight-fg "#0A0D16"
+
+set recolor-lightcolor "#0A0D16"
+set recolor-darkcolor "#ead0ac"
+set default-bg "#0A0D16"
+
+set inputbar-bg "#0A0D16"
+set inputbar-fg "#ead0ac"
+set notification-bg "#0A0D16"
+set notification-fg "#ead0ac"
+set notification-error-bg "#685548"
+set notification-error-fg "#ead0ac"
+set notification-warning-bg "#685548"
+set notification-warning-fg "#ead0ac"
+set statusbar-bg "#0A0D16"
+set statusbar-fg "#ead0ac"
+set index-bg "#0A0D16"
+set index-fg "#ead0ac"
+set index-active-bg "#ead0ac"
+set index-active-fg "#0A0D16"
+set render-loading-bg "#0A0D16"
+set render-loading-fg "#ead0ac"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f0d0b"
+set completion-fg "#c4c0c0"
+set completion-group-bg "#0f0d0b"
+set completion-group-fg "#595454"
+set completion-highlight-bg "#c4c0c0"
+set completion-highlight-fg "#0f0d0b"
+
+set recolor-lightcolor "#0f0d0b"
+set recolor-darkcolor "#c4c0c0"
+set default-bg "#0f0d0b"
+
+set inputbar-bg "#0f0d0b"
+set inputbar-fg "#c4c0c0"
+set notification-bg "#0f0d0b"
+set notification-fg "#c4c0c0"
+set notification-error-bg "#3B4240"
+set notification-error-fg "#c4c0c0"
+set notification-warning-bg "#3B4240"
+set notification-warning-fg "#c4c0c0"
+set statusbar-bg "#0f0d0b"
+set statusbar-fg "#c4c0c0"
+set index-bg "#0f0d0b"
+set index-fg "#c4c0c0"
+set index-active-bg "#c4c0c0"
+set index-active-fg "#0f0d0b"
+set render-loading-bg "#0f0d0b"
+set render-loading-fg "#c4c0c0"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f0d0b"
+set completion-fg "#c4c0c0"
+set completion-group-bg "#0f0d0b"
+set completion-group-fg "#595454"
+set completion-highlight-bg "#c4c0c0"
+set completion-highlight-fg "#0f0d0b"
+
+set recolor-lightcolor "#0f0d0b"
+set recolor-darkcolor "#c4c0c0"
+set default-bg "#0f0d0b"
+
+set inputbar-bg "#0f0d0b"
+set inputbar-fg "#c4c0c0"
+set notification-bg "#0f0d0b"
+set notification-fg "#c4c0c0"
+set notification-error-bg "#3B4240"
+set notification-error-fg "#c4c0c0"
+set notification-warning-bg "#3B4240"
+set notification-warning-fg "#c4c0c0"
+set statusbar-bg "#0f0d0b"
+set statusbar-fg "#c4c0c0"
+set index-bg "#0f0d0b"
+set index-fg "#c4c0c0"
+set index-active-bg "#c4c0c0"
+set index-active-fg "#0f0d0b"
+set render-loading-bg "#0f0d0b"
+set render-loading-fg "#c4c0c0"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0f0d0b"
+set completion-fg "#c4c0c0"
+set completion-group-bg "#0f0d0b"
+set completion-group-fg "#595454"
+set completion-highlight-bg "#c4c0c0"
+set completion-highlight-fg "#0f0d0b"
+
+set recolor-lightcolor "#0f0d0b"
+set recolor-darkcolor "#c4c0c0"
+set default-bg "#0f0d0b"
+
+set inputbar-bg "#0f0d0b"
+set inputbar-fg "#c4c0c0"
+set notification-bg "#0f0d0b"
+set notification-fg "#c4c0c0"
+set notification-error-bg "#3B4240"
+set notification-error-fg "#c4c0c0"
+set notification-warning-bg "#3B4240"
+set notification-warning-fg "#c4c0c0"
+set statusbar-bg "#0f0d0b"
+set statusbar-fg "#c4c0c0"
+set index-bg "#0f0d0b"
+set index-fg "#c4c0c0"
+set index-active-bg "#c4c0c0"
+set index-active-fg "#0f0d0b"
+set render-loading-bg "#0f0d0b"
+set render-loading-fg "#c4c0c0"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0401"
+set completion-fg "#ece0c6"
+set completion-group-bg "#0a0401"
+set completion-group-fg "#8D734E"
+set completion-highlight-bg "#ece0c6"
+set completion-highlight-fg "#0a0401"
+
+set recolor-lightcolor "#0a0401"
+set recolor-darkcolor "#ece0c6"
+set default-bg "#0a0401"
+
+set inputbar-bg "#0a0401"
+set inputbar-fg "#ece0c6"
+set notification-bg "#0a0401"
+set notification-fg "#ece0c6"
+set notification-error-bg "#84673D"
+set notification-error-fg "#ece0c6"
+set notification-warning-bg "#84673D"
+set notification-warning-fg "#ece0c6"
+set statusbar-bg "#0a0401"
+set statusbar-fg "#ece0c6"
+set index-bg "#0a0401"
+set index-fg "#ece0c6"
+set index-active-bg "#ece0c6"
+set index-active-fg "#0a0401"
+set render-loading-bg "#0a0401"
+set render-loading-fg "#ece0c6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#17140e"
+set completion-fg "#c9cad1"
+set completion-group-bg "#17140e"
+set completion-group-fg "#767B88"
+set completion-highlight-bg "#c9cad1"
+set completion-highlight-fg "#17140e"
+
+set recolor-lightcolor "#17140e"
+set recolor-darkcolor "#c9cad1"
+set default-bg "#17140e"
+
+set inputbar-bg "#17140e"
+set inputbar-fg "#c9cad1"
+set notification-bg "#17140e"
+set notification-fg "#c9cad1"
+set notification-error-bg "#847A6F"
+set notification-error-fg "#c9cad1"
+set notification-warning-bg "#847A6F"
+set notification-warning-fg "#c9cad1"
+set statusbar-bg "#17140e"
+set statusbar-fg "#c9cad1"
+set index-bg "#17140e"
+set index-fg "#c9cad1"
+set index-active-bg "#c9cad1"
+set index-active-fg "#17140e"
+set render-loading-bg "#17140e"
+set render-loading-fg "#c9cad1"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#060402"
+set completion-fg "#c6d0e2"
+set completion-group-bg "#060402"
+set completion-group-fg "#8C6B29"
+set completion-highlight-bg "#c6d0e2"
+set completion-highlight-fg "#060402"
+
+set recolor-lightcolor "#060402"
+set recolor-darkcolor "#c6d0e2"
+set default-bg "#060402"
+
+set inputbar-bg "#060402"
+set inputbar-fg "#c6d0e2"
+set notification-bg "#060402"
+set notification-fg "#c6d0e2"
+set notification-error-bg "#984E32"
+set notification-error-fg "#c6d0e2"
+set notification-warning-bg "#984E32"
+set notification-warning-fg "#c6d0e2"
+set statusbar-bg "#060402"
+set statusbar-fg "#c6d0e2"
+set index-bg "#060402"
+set index-fg "#c6d0e2"
+set index-active-bg "#c6d0e2"
+set index-active-fg "#060402"
+set render-loading-bg "#060402"
+set render-loading-fg "#c6d0e2"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#371a26"
+set completion-fg "#e9e3de"
+set completion-group-bg "#371a26"
+set completion-group-fg "#B49C8C"
+set completion-highlight-bg "#e9e3de"
+set completion-highlight-fg "#371a26"
+
+set recolor-lightcolor "#371a26"
+set recolor-darkcolor "#e9e3de"
+set default-bg "#371a26"
+
+set inputbar-bg "#371a26"
+set inputbar-fg "#e9e3de"
+set notification-bg "#371a26"
+set notification-fg "#e9e3de"
+set notification-error-bg "#D09967"
+set notification-error-fg "#e9e3de"
+set notification-warning-bg "#D09967"
+set notification-warning-fg "#e9e3de"
+set statusbar-bg "#371a26"
+set statusbar-fg "#e9e3de"
+set index-bg "#371a26"
+set index-fg "#e9e3de"
+set index-active-bg "#e9e3de"
+set index-active-fg "#371a26"
+set render-loading-bg "#371a26"
+set render-loading-fg "#e9e3de"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0E0C0A"
+set completion-fg "#e6e6ed"
+set completion-group-bg "#0E0C0A"
+set completion-group-fg "#83806F"
+set completion-highlight-bg "#e6e6ed"
+set completion-highlight-fg "#0E0C0A"
+
+set recolor-lightcolor "#0E0C0A"
+set recolor-darkcolor "#e6e6ed"
+set default-bg "#0E0C0A"
+
+set inputbar-bg "#0E0C0A"
+set inputbar-fg "#e6e6ed"
+set notification-bg "#0E0C0A"
+set notification-fg "#e6e6ed"
+set notification-error-bg "#676463"
+set notification-error-fg "#e6e6ed"
+set notification-warning-bg "#676463"
+set notification-warning-fg "#e6e6ed"
+set statusbar-bg "#0E0C0A"
+set statusbar-fg "#e6e6ed"
+set index-bg "#0E0C0A"
+set index-fg "#e6e6ed"
+set index-active-bg "#e6e6ed"
+set index-active-fg "#0E0C0A"
+set render-loading-bg "#0E0C0A"
+set render-loading-fg "#e6e6ed"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0a0401"
+set completion-fg "#ece0c6"
+set completion-group-bg "#0a0401"
+set completion-group-fg "#8D734E"
+set completion-highlight-bg "#ece0c6"
+set completion-highlight-fg "#0a0401"
+
+set recolor-lightcolor "#0a0401"
+set recolor-darkcolor "#ece0c6"
+set default-bg "#0a0401"
+
+set inputbar-bg "#0a0401"
+set inputbar-fg "#ece0c6"
+set notification-bg "#0a0401"
+set notification-fg "#ece0c6"
+set notification-error-bg "#84673D"
+set notification-error-fg "#ece0c6"
+set notification-warning-bg "#84673D"
+set notification-warning-fg "#ece0c6"
+set statusbar-bg "#0a0401"
+set statusbar-fg "#ece0c6"
+set index-bg "#0a0401"
+set index-fg "#ece0c6"
+set index-active-bg "#ece0c6"
+set index-active-fg "#0a0401"
+set render-loading-bg "#0a0401"
+set render-loading-fg "#ece0c6"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#1e1d0a"
+set completion-fg "#d2d3d9"
+set completion-group-bg "#1e1d0a"
+set completion-group-fg "#86775E"
+set completion-highlight-bg "#d2d3d9"
+set completion-highlight-fg "#1e1d0a"
+
+set recolor-lightcolor "#1e1d0a"
+set recolor-darkcolor "#d2d3d9"
+set default-bg "#1e1d0a"
+
+set inputbar-bg "#1e1d0a"
+set inputbar-fg "#d2d3d9"
+set notification-bg "#1e1d0a"
+set notification-fg "#d2d3d9"
+set notification-error-bg "#85732F"
+set notification-error-fg "#d2d3d9"
+set notification-warning-bg "#85732F"
+set notification-warning-fg "#d2d3d9"
+set statusbar-bg "#1e1d0a"
+set statusbar-fg "#d2d3d9"
+set index-bg "#1e1d0a"
+set index-fg "#d2d3d9"
+set index-active-bg "#d2d3d9"
+set index-active-fg "#1e1d0a"
+set render-loading-bg "#1e1d0a"
+set render-loading-fg "#d2d3d9"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0E080B"
+set completion-fg "#f6eac5"
+set completion-group-bg "#0E080B"
+set completion-group-fg "#FDA12E"
+set completion-highlight-bg "#f6eac5"
+set completion-highlight-fg "#0E080B"
+
+set recolor-lightcolor "#0E080B"
+set recolor-darkcolor "#f6eac5"
+set default-bg "#0E080B"
+
+set inputbar-bg "#0E080B"
+set inputbar-fg "#f6eac5"
+set notification-bg "#0E080B"
+set notification-fg "#f6eac5"
+set notification-error-bg "#E66423"
+set notification-error-fg "#f6eac5"
+set notification-warning-bg "#E66423"
+set notification-warning-fg "#f6eac5"
+set statusbar-bg "#0E080B"
+set statusbar-fg "#f6eac5"
+set index-bg "#0E080B"
+set index-fg "#f6eac5"
+set index-active-bg "#f6eac5"
+set index-active-fg "#0E080B"
+set render-loading-bg "#0E080B"
+set render-loading-fg "#f6eac5"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#12161d"
+set completion-fg "#e2e5e8"
+set completion-group-bg "#12161d"
+set completion-group-fg "#778799"
+set completion-highlight-bg "#e2e5e8"
+set completion-highlight-fg "#12161d"
+
+set recolor-lightcolor "#12161d"
+set recolor-darkcolor "#e2e5e8"
+set default-bg "#12161d"
+
+set inputbar-bg "#12161d"
+set inputbar-fg "#e2e5e8"
+set notification-bg "#12161d"
+set notification-fg "#e2e5e8"
+set notification-error-bg "#63758A"
+set notification-error-fg "#e2e5e8"
+set notification-warning-bg "#63758A"
+set notification-warning-fg "#e2e5e8"
+set statusbar-bg "#12161d"
+set statusbar-fg "#e2e5e8"
+set index-bg "#12161d"
+set index-fg "#e2e5e8"
+set index-active-bg "#e2e5e8"
+set index-active-fg "#12161d"
+set render-loading-bg "#12161d"
+set render-loading-fg "#e2e5e8"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#121111"
+set completion-fg "#d2dade"
+set completion-group-bg "#121111"
+set completion-group-fg "#9FA39B"
+set completion-highlight-bg "#d2dade"
+set completion-highlight-fg "#121111"
+
+set recolor-lightcolor "#121111"
+set recolor-darkcolor "#d2dade"
+set default-bg "#121111"
+
+set inputbar-bg "#121111"
+set inputbar-fg "#d2dade"
+set notification-bg "#121111"
+set notification-fg "#d2dade"
+set notification-error-bg "#84939B"
+set notification-error-fg "#d2dade"
+set notification-warning-bg "#84939B"
+set notification-warning-fg "#d2dade"
+set statusbar-bg "#121111"
+set statusbar-fg "#d2dade"
+set index-bg "#121111"
+set index-fg "#d2dade"
+set index-active-bg "#d2dade"
+set index-active-fg "#121111"
+set render-loading-bg "#121111"
+set render-loading-fg "#d2dade"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+set recolor "true"
+set adjust-open "best-fit"
+set completion-bg "#0A0D10"
+set completion-fg "#d0d3d9"
+set completion-group-bg "#0A0D10"
+set completion-group-fg "#555F6A"
+set completion-highlight-bg "#d0d3d9"
+set completion-highlight-fg "#0A0D10"
+
+set recolor-lightcolor "#0A0D10"
+set recolor-darkcolor "#d0d3d9"
+set default-bg "#0A0D10"
+
+set inputbar-bg "#0A0D10"
+set inputbar-fg "#d0d3d9"
+set notification-bg "#0A0D10"
+set notification-fg "#d0d3d9"
+set notification-error-bg "#47494D"
+set notification-error-fg "#d0d3d9"
+set notification-warning-bg "#47494D"
+set notification-warning-fg "#d0d3d9"
+set statusbar-bg "#0A0D10"
+set statusbar-fg "#d0d3d9"
+set index-bg "#0A0D10"
+set index-fg "#d0d3d9"
+set index-active-bg "#d0d3d9"
+set index-active-fg "#0A0D10"
+set render-loading-bg "#0A0D10"
+set render-loading-fg "#d0d3d9"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+
+set pages-per-row 1
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
