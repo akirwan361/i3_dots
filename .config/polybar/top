@@ -38,7 +38,7 @@ font-2 			= "icomoon\-feather:size=12;2"
 modules-left        	= time wireless 
 ;vpn
 ;modules-center      	= mpd
-modules-right       	= battery temp memory cpu 
+modules-right       	= battery temp-script memory cpu 
 
 tray-position       	= none
 ;tray-detached 	    = true 
@@ -172,6 +172,19 @@ format-prefix-foreground 	= ${colors.foreground-alt}
 ramp-foregound 			= ${colors.alert}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[module/temp-script]
+
+type = custom/script
+exec = ~/.config/polybar/tempmon
+click-left = ~/.config/polybar/tempmon --popup
+format-underline = ${colors.primary}
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 [module/cpu]
 type 				= internal/cpu 

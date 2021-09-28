@@ -49,21 +49,19 @@ bindsym XF86AudioLowerVolume exec changeVolume -2%
 # bindsym $mod+shift+u exec changeVolume 2dB+ unmute
 # brightness keys
 # increase
-#bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'brightness up'"
-bindsym XF86MonBrightnessUp exec --no-startup-id changeBrightness incr 
-bindsym XF86MonBrightnessDown exec --no-startup-id changeBrightness decr
+# bindsym XF86MonBrightnessUp exec "xbacklight -inc 5; notify-send 'brightness up'"
 
 # decrease
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 5; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec --no-startup-id changeBrightness incr 
+bindsym XF86MonBrightnessDown exec --no-startup-id changeBrightness decr
 
-# Set a suspend key?
-bindsym Ctrl+shift+s exec systemctl suspend
 
-set $Locker light-locker && sleep 1
+set $Locker betterlockscreen -l && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker --no-late-locking, mode "default"
+    bindsym l exec --no-startup-id $Locker lock, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id $Locker --lock-on-suspend && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker --lock-on-suspend && systemctl hibernate, mode "default"
@@ -262,10 +260,16 @@ hide_edge_borders both
 
 # let's try to set the betterlockscreen
 # set desktop background with custom effect
-# exec --no-startup-id betterlockscreen -u $(cat ~/.cache/wal/wal)
+exec --no-startup-id betterlockscreen -u $(cat ~/.cache/wal/wal)
 
 # keybind it
-# bindsym $mod+Shift+x exec betterlockscreen -l blur 
+bindsym $mod+Shift+x exec betterlockscreen -l blur 
+
+# Set a suspend key?
+bindsym Ctrl+shift+s exec --no-startup-id sh $HOME/.config/i3/locksuspend.sh suspend &!
+
+#betterlockscreen -l blur && sleep 1 && systemctl suspend
+# dm-tool lock && sleep 1 && systemctl suspend
 
 # assign some programs to certain workspaces?
 # assign [class="firefox"] $ws1 
