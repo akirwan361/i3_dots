@@ -280,7 +280,7 @@ assign [class="Zathura"] $ws2
 #for_window [title="^cava"] move to workspace $ws5
 
 # make sure python plots have floating windows 
-for_window [class="^matplotlib"] floating enable
+for_window [class="(?m)atplotlib"] floating enable
 for_window [class="QFitsView_4.0"] floating enable
 for_window [title="SAOImage ds9"] floating enable
 

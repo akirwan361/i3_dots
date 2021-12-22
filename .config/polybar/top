@@ -178,7 +178,7 @@ ramp-foregound 			= ${colors.alert}
 type = custom/script
 exec = ~/.config/polybar/tempmon
 click-left = ~/.config/polybar/tempmon --popup
-format-underline = ${colors.primary}
+format-underline = ${colors.foreground-alt}
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}

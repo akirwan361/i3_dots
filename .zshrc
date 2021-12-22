@@ -53,7 +53,7 @@ alias pmixer='python3 /usr/local/bin/pulsectl_mixer.py'
 # for the workflow
 alias guct="$HOME/GUCT/GuideCamTool-linux-2.1.0/bin/GuideCamTool"	 
 alias qfits="$HOME/QFitsView/QFitsView_4.1"
-alias ds9="/usr/bin/ds9"
+# alias ds9="/usr/bin/ds9"
 alias ciao="source $HOME/ciao_env/ciao-4.12/bin/ciao.bash"
 
 # we'll need to sort out the virtual envs sometime...

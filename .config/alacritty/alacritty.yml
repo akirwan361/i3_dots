@@ -50,29 +50,29 @@ draw_bold_text_with_bright_colors: true
 # BEGIN ACE
 colors:
   primary:
-    background: '0x0A0D10'
-    foreground: '0xd0d3d9'
+    background: '0x0b0a06'
+    foreground: '0xc1c5c9'
   cursor:
-    text:       '0x0A0D10'
-    cursor:     '0xd0d3d9'
+    text:       '0x0b0a06'
+    cursor:     '0xc1c5c9'
   normal:
-    black:      '0x0A0D10'
-    red:        '0x47494D'
-    green:      '0x555F6A'
-    yellow:     '0x6A6E73'
-    blue:       '0x707A86'
-    magenta:    '0x7A848F'
-    cyan:       '0x9B9FA5'
-    white:      '0xd0d3d9'
+    black:      '0x0b0a06'
+    red:        '0x5D626C'
+    green:      '0x857F78'
+    yellow:     '0x5C7082'
+    blue:       '0x787B86'
+    magenta:    '0x7E818C'
+    cyan:       '0x868891'
+    white:      '0xc1c5c9'
   bright:
-    black:      '0x919397'
-    red:        '0x47494D'
-    green:      '0x555F6A'
-    yellow:     '0x6A6E73'
-    blue:       '0x707A86'
-    magenta:    '0x7A848F'
-    cyan:       '0x9B9FA5'
-    white:      '0xd0d3d9'
+    black:      '0x87898c'
+    red:        '0x5D626C'
+    green:      '0x857F78'
+    yellow:     '0x5C7082'
+    blue:       '0x787B86'
+    magenta:    '0x7E818C'
+    cyan:       '0x868891'
+    white:      '0xc1c5c9'
 
 # END ACE
 
