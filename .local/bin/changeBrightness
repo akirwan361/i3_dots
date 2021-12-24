@@ -1,0 +1,21 @@
+#!/bin/bash 
+# changeBrightness
+
+# arbitrary but unique message ID 
+msgId="999301"
+
+value=$1
+case $value in 
+   "incr") xbacklight -inc 5;;
+   "decr") xbacklight -dec 5;;
+esac
+
+#declare -i BRIGHTNESS 
+# xbacklight returns a float value; to get the nearest integer value, we simply
+# add 0.5 and strip away the decimals
+BRIGHTNESS=`echo $(xbacklight -get) | awk '{print $1 + 0.5}'`  
+FMTED=${BRIGHTNESS%.*}
+# echo "$FMTED"
+ #echo "$(xbacklight -get)" | awk '{ print $1 + 0.5 }'
+dunstify -a "changeBrightness" -u low -i audio-volume-high -r "$msgId" \
+  "Brightness: ${FMTED}" "$(getProgressString 10 "<b> </b>" " " $FMTED)"
