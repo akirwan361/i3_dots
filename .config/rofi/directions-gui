@@ -1,0 +1,22 @@
+FULL_DIRECTIONS=(
+    '0 Center'
+    '1 Northwest'
+    '2 North'
+    '3 Northeast'
+    '4 East'
+    '5 Southeast'
+    '6 South'
+    '7 Soutwest'
+    '8 West'
+)
+
+for index in "${!DIRECTIONS[@]}"; do
+    key="${DIRECTIONS[$index]}"
+    DIRECTION_INDICES[$key]=$index
+    full_string="${FULL_LOCATIONS[$index]}"
+    if [[ $CURRENT_LOCATION -eq "${full_string//[^0-9]/}" ]]; then
+        first_direction="${FULL_DIRECTIONS[0]}"
+	FULL_DIRECTIONS[$index]="$first_direction"
+	FULL_DIRECTIONS[0]="${FULL_DIRECTIONS[$index]} (active)"
+    fi
+done:
